@@ -3,6 +3,7 @@ import NavBar from "../NavBar"
 import './styles.css';
 import cuttlefish from '../../images/cuttlefish-image.png'
 import About from "../About";
+import Icons from "../Icons";
 
 function MainPage() {
 
@@ -12,6 +13,8 @@ function MainPage() {
         setIsDisplayed(!isDisplayed)
     }
 
+    const [showIcons, setShowIcons] = useState(false)
+   
 
     return (
         <>
@@ -22,9 +25,16 @@ function MainPage() {
                 setIsDisplayed = {setIsDisplayed}/>
             }
             <button onClick={handleAboutClick}>About</button>
-                <img id="cuttlefishImg" src={cuttlefish} alt="cuttlefish logo" className="mx-auto img-fluid d-block"></img>
                 <NavBar />
             </div>
+
+        <div>
+            {showIcons && 
+            <Icons />
+            }
+            <NavBar setShowIcons={setShowIcons} showIcons={showIcons}/>
+        </div>
+
         </>
     )
 }
