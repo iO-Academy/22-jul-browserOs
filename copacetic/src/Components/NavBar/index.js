@@ -8,13 +8,17 @@ function NavBar() {
     return (
         <>
             <section className="container">
-                <div className="row">
-                    <div className="navbar fixed-bottom d-flex justify-content-between">
+                <div className="row navbar justify-content-between fixed-bottom px-4">
+                    <div className="">
                     <FullScreen />
+                    </div>
+                    <div className="">
                     <MenuBtn />
+                    </div>
+                    <div className="">
                     <Clock />
                     </div>
-                </div> 
+                </div>
             </section>
         </>
     )

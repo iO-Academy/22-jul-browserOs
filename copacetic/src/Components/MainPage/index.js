@@ -1,11 +1,11 @@
 import NavBar from "../NavBar"
+import './styles.css'
 
 function MainPage() {
 
     return (
         <>
-        <p>This is the mainpage</p>
-        <NavBar />
+            <NavBar />
         </>
     )
 }

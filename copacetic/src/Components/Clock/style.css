@@ -1,0 +1,8 @@
+.clockContainer {
+    text-align: center;
+}
+
+.clock {
+    color: white;
+    min-height: 40px;
+}
