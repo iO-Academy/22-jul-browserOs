@@ -7,8 +7,10 @@ function MainPage() {
     return (
         <>
         <div id="background">
-        <Icons />
-        <NavBar />
+        </div>
+        <div>
+            <Icons />
+            <NavBar />
         </div>
         </>
     )
