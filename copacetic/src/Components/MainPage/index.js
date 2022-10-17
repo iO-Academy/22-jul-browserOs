@@ -5,7 +5,7 @@ function MainPage() {
 
     return (
         <>
-        <img src={cuttlefish} alt="cuttlefish logo" className="mx-auto img-fluid d-block"></img>
+        <img id="cuttlefishImg" src={cuttlefish} alt="cuttlefish logo" className="mx-auto img-fluid d-block"></img>
         <NavBar />
         </>
     )
