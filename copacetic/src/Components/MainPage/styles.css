@@ -4,6 +4,7 @@ body {
 	animation: gradient 15s ease infinite;
 }
 
+
 @keyframes gradient {
 	0% {
 		background-position: 0% 50%;
@@ -16,12 +17,17 @@ body {
 	}
 }
 
-#cuttlefishImg {
-    width: 50%;
+
+#background {
+	height: 100vh;
+	background: url('../../images/cuttlefish-image.png');
+	background-repeat: no-repeat;
+	background-position: center;
 }
+
 
 @media only screen and (max-width: 500px) {
     #cuttlefishImg {
-        width: 80%;
+        width: 70%;
     }
 }
