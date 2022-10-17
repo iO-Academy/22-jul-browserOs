@@ -1,23 +1,40 @@
-import { useState } from "react"
+import {useState } from "react"
+import React, { useCallback, useEffect } from "react";
+
+
 import './styles.css'
 import reduceImg from '../../images/focus.png'
 import expandImg from '../../images/full-screen.png'
 
 function FullScreen() {
     const [isFullscreen, setIsFullscreen] = useState(false)
-    const [displayIcon, setDisplayIcon] = useState(true)
 
-    const fullScreenClick = () => {
+    const fullScreenClick = (e) => {
         if(isFullscreen) {
             document.exitFullscreen();
             setIsFullscreen(false)
-            setDisplayIcon(true)
+
         } else {
             document.body.requestFullscreen()
             setIsFullscreen(true)
-            setDisplayIcon(false)
         }
     }
+
+    const exitHandler = () => {
+        if (!document.webkitIsFullScreen && !document.mozFullScreen && !document.msFullscreenElement) {
+            setIsFullscreen(false)
+        }
+    }
+    
+      useEffect(() => {
+        if (document.addEventListener) {
+            document.addEventListener('webkitfullscreenchange', exitHandler, false);
+            document.addEventListener('mozfullscreenchange', exitHandler, false);
+            document.addEventListener('fullscreenchange', exitHandler, false);
+            document.addEventListener('MSFullscreenChange', exitHandler, false);
+        }
+      }, []);
+
 
     const expand = () => {
         return <img onClick={fullScreenClick} id="expand" src={expandImg}></img>
@@ -29,7 +46,7 @@ function FullScreen() {
 
     return (
         <>
-            { displayIcon ? expand() : reduce() }
+            { isFullscreen ? reduce() : expand() }
         </>
     )
 }
