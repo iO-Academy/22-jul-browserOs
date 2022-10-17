@@ -6,8 +6,10 @@ function MainPage() {
 
     return (
         <>
+        <div id="background">
         <img id="cuttlefishImg" src={cuttlefish} alt="cuttlefish logo" className="mx-auto img-fluid d-block"></img>
         <NavBar />
+        </div>
         </>
     )
 }
