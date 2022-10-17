@@ -1,8 +1,52 @@
+import {useState } from "react"
+import React, { useCallback, useEffect } from "react";
+
+
+import './styles.css'
+import reduceImg from '../../images/focus.png'
+import expandImg from '../../images/full-screen.png'
+
 function FullScreen() {
+    const [isFullscreen, setIsFullscreen] = useState(false)
+
+    const fullScreenClick = (e) => {
+        if(isFullscreen) {
+            document.exitFullscreen();
+            setIsFullscreen(false)
+
+        } else {
+            document.body.requestFullscreen()
+            setIsFullscreen(true)
+        }
+    }
+
+    const exitHandler = () => {
+        if (!document.webkitIsFullScreen && !document.mozFullScreen && !document.msFullscreenElement) {
+            setIsFullscreen(false)
+        }
+    }
+    
+      useEffect(() => {
+        if (document.addEventListener) {
+            document.addEventListener('webkitfullscreenchange', exitHandler, false);
+            document.addEventListener('mozfullscreenchange', exitHandler, false);
+            document.addEventListener('fullscreenchange', exitHandler, false);
+            document.addEventListener('MSFullscreenChange', exitHandler, false);
+        }
+      }, []);
+
+
+    const expand = () => {
+        return <img onClick={fullScreenClick} id="expand" src={expandImg}></img>
+    }
+
+    const reduce = () => {
+        return <img onClick={fullScreenClick} id="reduce" src={reduceImg}></img>
+    }
 
     return (
         <>
-            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"><path d="M21.414 18.586l2.586-2.586v8h-8l2.586-2.586-5.172-5.172 2.828-2.828 5.172 5.172zm-13.656-8l2.828-2.828-5.172-5.172 2.586-2.586h-8v8l2.586-2.586 5.172 5.172zm10.828-8l-2.586-2.586h8v8l-2.586-2.586-5.172 5.172-2.828-2.828 5.172-5.172zm-8 13.656l-2.828-2.828-5.172 5.172-2.586-2.586v8h8l-2.586-2.586 5.172-5.172z"/></svg>
+            { isFullscreen ? reduce() : expand() }
         </>
     )
 }

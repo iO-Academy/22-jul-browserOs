@@ -15,14 +15,16 @@ function MainPage() {
 
     return (
         <>
-        {isDisplayed &&
-            <About 
-            isDisplayed = {isDisplayed}
-            setIsDisplayed = {setIsDisplayed}/>
-        }
-        <button onClick={handleAboutClick}>About</button>
-        <img id="cuttlefishImg" src={cuttlefish} alt="cuttlefish logo" className="mx-auto img-fluid d-block"></img>
-        <NavBar />
+        <div id="background">
+            {isDisplayed &&
+                <About 
+                isDisplayed = {isDisplayed}
+                setIsDisplayed = {setIsDisplayed}/>
+            }
+            <button onClick={handleAboutClick}>About</button>
+                <img id="cuttlefishImg" src={cuttlefish} alt="cuttlefish logo" className="mx-auto img-fluid d-block"></img>
+                <NavBar />
+            </div>
         </>
     )
 }
