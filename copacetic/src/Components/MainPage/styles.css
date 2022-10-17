@@ -1,8 +1,10 @@
-body {
+#root {
 	background: linear-gradient(-45deg, #f7c547, #e73c50, #23a6d5, #23d5ab);
 	background-size: 400% 400%;
 	animation: gradient 15s ease infinite;
+	height: 100vh;
 }
+
 
 @keyframes gradient {
 	0% {
@@ -16,12 +18,17 @@ body {
 	}
 }
 
-#cuttlefishImg {
-    width: 50%;
-}
 
-@media only screen and (max-width: 500px) {
+#background {
+	height: 70vh;
+	background: url('../../images/cuttlefish-image.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+} 
+
+/* @media only screen and (max-width: 500px) {
     #cuttlefishImg {
-        width: 80%;
+        width: 70%;
     }
-}
+} */

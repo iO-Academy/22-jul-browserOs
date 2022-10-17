@@ -1,13 +1,24 @@
 import NavBar from "../NavBar"
 import './styles.css';
-import cuttlefish from '../../images/cuttlefish-image.png'
+import Icons from "../Icons";
+import { useState } from "react";
+
 
 function MainPage() {
 
+    const [showIcons, setShowIcons] = useState(false)
     return (
         <>
-        <img id="cuttlefishImg" src={cuttlefish} alt="cuttlefish logo" className="mx-auto img-fluid d-block"></img>
-        <NavBar />
+        <div id="background">
+        </div>
+        <div>
+            {showIcons && 
+            <Icons />
+            
+            
+            }
+            <NavBar setShowIcons={setShowIcons} showIcons={showIcons}/>
+        </div>
         </>
     )
 }
