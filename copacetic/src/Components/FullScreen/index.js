@@ -4,7 +4,6 @@ function FullScreen() {
     const [isFullscreen, setIsFullscreen] = useState(false)
 
     const fullScreenClick = () => {
-        console.log('clicked')
         if(isFullscreen) {
             document.exitFullscreen();
             setIsFullscreen(false)
