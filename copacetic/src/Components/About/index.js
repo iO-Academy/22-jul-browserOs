@@ -1,15 +1,29 @@
+import AboutContent from "../AboutContent"
+import './style.css'
 
 
-function About() {
 
+function About({isDisplayed, setIsDisplayed}) {
+
+    const handleAboutClick = () => {
+        setIsDisplayed(!isDisplayed)
+    }
 
     return (
-        <>  
-            <h3>About</h3>
-            <h5>Meet the Team</h5>
-            <p>Emily</p>
-            <img src="../../images/emily.png"></img>
-        </>
+        <>
+        
+            <div className="card position-absolute about">
+                <div className="row d-flex justify-content-center topBar">
+                    <p>About</p>
+                    <button onClick={handleAboutClick}>x</button>
+                </div>
+                <div>
+                    <AboutContent />
+                </div>
+            
+            </div>
+            
+    </>
     )
 }
 
