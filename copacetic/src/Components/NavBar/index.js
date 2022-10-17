@@ -9,13 +9,13 @@ function NavBar() {
         <>
             <section className="container">
                 <div className="row navbar justify-content-between fixed-bottom px-4">
-                    <div className="">
+                    <div>
                     <FullScreen />
                     </div>
-                    <div className="">
+                    <div>
                     <MenuBtn />
                     </div>
-                    <div className="">
+                    <div>
                     <Clock />
                     </div>
                 </div>
