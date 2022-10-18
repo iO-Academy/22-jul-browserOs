@@ -1,12 +1,11 @@
-import AboutContent from "../AboutContent"
 import Draggable from 'react-draggable';
 import './style.css'
 
-function About({isDisplayed, setIsDisplayed}) {
+function box({isDisplayed, setIsDisplayed}) {
 
-    const handleAboutClick = () => {
-        setIsDisplayed(!isDisplayed)
-    }
+    // const handle[insert box name ]Click = () => {
+    //     setIsDisplayed(!isDisplayed)
+    // }
 
     return (
         <>
@@ -21,12 +20,12 @@ function About({isDisplayed, setIsDisplayed}) {
                         About
                     </div>
                     <div className="no-cursor content">
-                        <AboutContent />
+                        {/* insert content */}
                     </div>
                 </div> 
-            </Draggable> 
+            </Draggable>  
         </>
     )
 }
 
-export default About
+export default box
