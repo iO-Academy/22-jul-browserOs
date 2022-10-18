@@ -1,7 +1,5 @@
 import {useState } from "react"
-import React, { useCallback, useEffect } from "react";
-
-
+import React, { useEffect } from "react";
 import './styles.css'
 import reduceImg from '../../images/focus.png'
 import expandImg from '../../images/full-screen.png'

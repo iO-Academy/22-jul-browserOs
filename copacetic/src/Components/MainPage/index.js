@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react"
 import NavBar from "../NavBar"
 import './styles.css';
-import cuttlefish from '../../images/cuttlefish-image.png'
 import About from "../About";
 import Icons from "../Icons";
 
