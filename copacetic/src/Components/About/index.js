@@ -9,30 +9,22 @@ function About({isDisplayed, setIsDisplayed}) {
         setIsDisplayed(!isDisplayed)
     }
 
-    const style = {
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        border: "solid 1px #ddd",
-        background: "#f0f0f0"
-      };
+
 
     return (
         <>
-            {/* <Draggable> */}
-            <Resizable
-            style={style}
-            defaultSize={{ width:320, height:200 }} >
-                <div className="test">
+            <Draggable handle=".handle">
+                <div className="box">
+                    <div className="handle topBar">
                         <p>About</p>
                         <button onClick={handleAboutClick}>x</button>
                     </div>
                     <div className="no-cursor">
                         <AboutContent />
                     </div>
-                </Resizable>
-            {/* </Draggable>
-             */}
+                </div>
+            </Draggable>
+            
     </>
     )
 }
