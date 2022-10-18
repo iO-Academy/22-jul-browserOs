@@ -1,3 +1,8 @@
+function shuffle(array) {
+    array.sort(() => Math.random() - 0.5);
+  }
+
+function getAGif(){
 const gifArray = [
     "https://media.giphy.com/media/45GedASYX0h0c/giphy.gif", 
     "https://media.giphy.com/media/3o7abAHdYvZdBNnGZq/giphy.gif", 
@@ -21,8 +26,9 @@ const gifArray = [
     "https://media.giphy.com/media/TcdpZwYDPlWXC/giphy.gif"
 ]
 
-function shuffleArrayGetOne(){
- shuffled = gifArray.shuffle
- singleGifArray = shuflled.slice(1,1)
+ shuffle(gifArray)
+ let singleGifArray = gifArray.slice(0,1)
  return singleGifArray.toString()
 }
+
+export default getAGif
