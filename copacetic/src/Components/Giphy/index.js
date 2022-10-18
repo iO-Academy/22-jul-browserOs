@@ -30,3 +30,4 @@ function box({isGifDisplayed, setIsGifDisplayed}) {
 }
 
 export default box
+
