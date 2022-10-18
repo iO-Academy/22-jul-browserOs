@@ -15,7 +15,7 @@ function NavBar({showIcons, setShowIcons}) {
                     <MenuBtn 
                     showIcons={showIcons}/>
                 </div>
-                <div className="col-4 d-flex justify-content-end"><Clock /></div>
+                <div className="col-4 d-flex justify-content-end notAllowed"><Clock /></div>
             </div>
         </>
     )

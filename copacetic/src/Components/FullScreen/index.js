@@ -43,7 +43,7 @@ function FullScreen() {
     }
 
     return (
-        <div>
+        <div className="pointer">
             { isFullscreen ? reduce() : expand() }
         </div>
     )

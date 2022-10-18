@@ -12,7 +12,7 @@ function MenuBtn({showIcons}) {
     }
 
     return (
-        <div>
+        <div className="pointer">
             { showIcons ? open() : closed() }
         </div>
     )
