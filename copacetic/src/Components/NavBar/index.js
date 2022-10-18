@@ -7,13 +7,16 @@ function NavBar({showIcons, setShowIcons}) {
 
     return (
         <>
-            <section className="container">
-                <div className="row navbar justify-content-between fixed-bottom px-5">
-                    <div><FullScreen /></div>
-                    <div onClick={()=> setShowIcons(!showIcons)}><MenuBtn /></div>
-                    <div><Clock /></div>
+            <div className="row fixed-bottom px-4 pt-4 navBackground">
+                <div className="col-4 d-flex justify-content-start">
+                <FullScreen />
                 </div>
-            </section>
+                <div className="col-4 d-flex justify-content-center"onClick={()=> setShowIcons(!showIcons)}>
+                    <MenuBtn 
+                    showIcons={showIcons}/>
+                </div>
+                <div className="col-4 d-flex justify-content-end notAllowed"><Clock /></div>
+            </div>
         </>
     )
 }

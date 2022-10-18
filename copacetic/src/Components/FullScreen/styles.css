@@ -1,11 +1,3 @@
-img {
-    width: 7%;
-}
-
-.visible {
-    display: inline;
-}
-
-.hidden {
-    display: none;
+.fullScreenImg {
+    width: 25px;
 }

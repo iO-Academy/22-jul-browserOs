@@ -1,7 +1,5 @@
 import {useState } from "react"
-import React, { useCallback, useEffect } from "react";
-
-
+import React, { useEffect } from "react";
 import './styles.css'
 import reduceImg from '../../images/focus.png'
 import expandImg from '../../images/full-screen.png'
@@ -37,17 +35,17 @@ function FullScreen() {
 
 
     const expand = () => {
-        return <img onClick={fullScreenClick} id="expand" src={expandImg}></img>
+        return <img className="fullScreenImg" onClick={fullScreenClick} id="expand" src={expandImg}></img>
     }
 
     const reduce = () => {
-        return <img onClick={fullScreenClick} id="reduce" src={reduceImg}></img>
+        return <img className="fullScreenImg" onClick={fullScreenClick} id="reduce" src={reduceImg}></img>
     }
 
     return (
-        <>
+        <div className="pointer">
             { isFullscreen ? reduce() : expand() }
-        </>
+        </div>
     )
 }
 

@@ -5,7 +5,6 @@
 	height: 100vh;
 }
 
-
 @keyframes gradient {
 	0% {
 		background-position: 0% 50%;
@@ -18,17 +17,10 @@
 	}
 }
 
-
-#background {
+.background {
 	height: 70vh;
 	background: url('../../images/cuttlefish-image.png');
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: contain;
 } 
-
-/* @media only screen and (max-width: 500px) {
-    #cuttlefishImg {
-        width: 70%;
-    }
-} */
