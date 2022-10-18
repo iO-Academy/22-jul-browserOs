@@ -1,0 +1,11 @@
+.about {
+    width: fit-content;
+    top: 100px;
+    left: 100px;
+    z-index: 100;
+    border: solid black 2px;
+}
+
+.topBar {
+    background-color: red;
+}
