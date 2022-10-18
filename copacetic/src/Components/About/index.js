@@ -1,8 +1,7 @@
 import AboutContent from "../AboutContent"
 import Draggable from 'react-draggable';
+import { Resizable } from "re-resizable";
 import './style.css'
-
-
 
 function About({isDisplayed, setIsDisplayed}) {
 
@@ -10,22 +9,30 @@ function About({isDisplayed, setIsDisplayed}) {
         setIsDisplayed(!isDisplayed)
     }
 
-
+    const style = {
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        border: "solid 1px #ddd",
+        background: "#f0f0f0"
+      };
 
     return (
         <>
-            <Draggable>
-                <div className="card position-absolute about no-cursor" id="about">
-                    <div className="cursor row d-flex justify-content-center topBar">
+            {/* <Draggable> */}
+            <Resizable
+            style={style}
+            defaultSize={{ width:320, height:200 }} >
+                <div className="test">
                         <p>About</p>
                         <button onClick={handleAboutClick}>x</button>
                     </div>
                     <div className="no-cursor">
                         <AboutContent />
                     </div>
-                </div>
-            </Draggable>
-            
+                </Resizable>
+            {/* </Draggable>
+             */}
     </>
     )
 }
