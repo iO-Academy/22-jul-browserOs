@@ -1,8 +1,12 @@
 import './styles.css'
-function Icons({isDisplayed, setIsDisplayed}) {
+function Icons({isDisplayed, setIsDisplayed, isThemeDisplayed, setIsThemeDisplayed}) {
 
     const handleAboutClick = () => {
         setIsDisplayed(!isDisplayed)
+    }
+
+    const handleThemeClick = () => {
+        setIsThemeDisplayed(!isThemeDisplayed)
     }
 
     return (
@@ -12,7 +16,7 @@ function Icons({isDisplayed, setIsDisplayed}) {
                         <h1 className="text-center mb-0 px-3 font-weight-bold mt-1">A</h1>
                         <p className="text-center">About</p>
                     </div>
-                    <div className="iconBackground col border rounded m-3 pointer">
+                    <div onClick={handleThemeClick} className="iconBackground col border rounded m-3 pointer">
                         <h1 className="text-center mb-0 px-3 font-weight-bold mt-1">T</h1>
                         <p className="text-center">Themes</p>
                     </div>

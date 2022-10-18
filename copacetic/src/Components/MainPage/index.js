@@ -3,10 +3,12 @@ import NavBar from "../NavBar"
 import './styles.css';
 import About from "../About";
 import Icons from "../Icons";
+import Themes from "../Themes";
 
 function MainPage() {
 
     const [isDisplayed, setIsDisplayed] = useState(false)
+    const [isThemeDisplayed, setIsThemeDisplayed] = useState(false)
     const [showIcons, setShowIcons] = useState(false)
 
     return (
@@ -17,11 +19,18 @@ function MainPage() {
                     isDisplayed = {isDisplayed}
                     setIsDisplayed = {setIsDisplayed}/>
                 }
+                {isThemeDisplayed &&
+                    <Themes 
+                    isThemeDisplayed = {isThemeDisplayed}
+                    setIsThemeDisplayed = {setIsThemeDisplayed}/>
+                }
             </div>
             {showIcons && 
             <Icons 
             isDisplayed = {isDisplayed}
-            setIsDisplayed = {setIsDisplayed}/>
+            setIsDisplayed = {setIsDisplayed}
+            isThemeDisplayed = {isThemeDisplayed}
+            setIsThemeDisplayed = {setIsThemeDisplayed}/>
             }
             <NavBar 
             setShowIcons={setShowIcons} 
