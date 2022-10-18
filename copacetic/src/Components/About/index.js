@@ -1,6 +1,5 @@
 import AboutContent from "../AboutContent"
 import Draggable from 'react-draggable';
-import { Resizable } from "re-resizable";
 import './style.css'
 
 function About({isDisplayed, setIsDisplayed}) {
@@ -8,8 +7,6 @@ function About({isDisplayed, setIsDisplayed}) {
     const handleAboutClick = () => {
         setIsDisplayed(!isDisplayed)
     }
-
-
 
     return (
         <>
@@ -23,9 +20,8 @@ function About({isDisplayed, setIsDisplayed}) {
                         <AboutContent />
                     </div>
                 </div>
-            </Draggable>
-            
-    </>
+            </Draggable>    
+        </>
     )
 }
 
