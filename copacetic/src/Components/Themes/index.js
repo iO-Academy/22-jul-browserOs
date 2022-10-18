@@ -19,11 +19,11 @@ function Themes({isThemeDisplayed, setIsThemeDisplayed}) {
                     <div className="titlebar handle">
                         Themes
                     </div>
-                    <div className="no-cursor content">
-                        <ul>
-                            <li>Theme 1</li>
-                            <li>Theme 2</li>
-                        </ul>
+                    <div className="d-flex no-cursor content">
+                        <div class="d-flex flex-column">
+                            <div class="pb-3 pointer">Cuttlefish</div>
+                            <div class="pb-3 pointer">Title</div>
+                        </div>   
                     </div>
                 </div> 
             </Draggable> 
