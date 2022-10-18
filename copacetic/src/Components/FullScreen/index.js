@@ -35,11 +35,11 @@ function FullScreen() {
 
 
     const expand = () => {
-        return <img onClick={fullScreenClick} id="expand" src={expandImg}></img>
+        return <img className="fullScreenImg" onClick={fullScreenClick} id="expand" src={expandImg}></img>
     }
 
     const reduce = () => {
-        return <img onClick={fullScreenClick} id="reduce" src={reduceImg}></img>
+        return <img className="fullScreenImg" onClick={fullScreenClick} id="reduce" src={reduceImg}></img>
     }
 
     return (

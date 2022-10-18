@@ -1,14 +1,15 @@
+import './styles.css'
 import menuClosed from '../../images/triangle1.png';
 import menuOpen from '../../images/triangle2.png';
 
 function MenuBtn({showIcons}) {
 
     const closed = () => {
-        return <img src={menuClosed}></img>
+        return <img className="menuImg" src={menuClosed}></img>
     }
 
     const open = () => {
-        return <img src={menuOpen}></img>
+        return <img className="menuImg" src={menuOpen}></img>
     }
 
     return (
