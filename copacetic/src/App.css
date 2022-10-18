@@ -1,0 +1,11 @@
+body {
+  height: 100vh;
+}
+
+.pointer { 
+  cursor: pointer;
+}
+
+.notAllowed {
+  cursor: not-allowed;
+}
