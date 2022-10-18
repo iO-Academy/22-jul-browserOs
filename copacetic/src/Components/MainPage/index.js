@@ -19,14 +19,12 @@ function MainPage() {
                     setIsDisplayed = {setIsDisplayed}/>
                 }
             </div>
-            <div>
-                {showIcons && 
-                <Icons 
-                isDisplayed = {isDisplayed}
-                setIsDisplayed = {setIsDisplayed}/>
-                }
-                <NavBar setShowIcons={setShowIcons} showIcons={showIcons}/>
-            </div>
+            {showIcons && 
+            <Icons 
+            isDisplayed = {isDisplayed}
+            setIsDisplayed = {setIsDisplayed}/>
+            }
+            <NavBar setShowIcons={setShowIcons} showIcons={showIcons}/>
         </>
     )
 }
