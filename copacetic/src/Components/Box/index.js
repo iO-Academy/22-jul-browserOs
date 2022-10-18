@@ -9,24 +9,26 @@ function box({isDisplayed, setIsDisplayed}) {
 
     return (
         <>
-            <Draggable handle=".handle">
-                <div className="window">
-                    <div className="titlebar handle">
-                        <div className="buttons">
-                            <div className="close">
-                                {/* update about click below for actual box */}
-                                <a onClick={handleAboutClick} className="closebutton"><span><strong>x</strong></span></a>
-                                {/* update above */}
-                            </div>
+        <Draggable handle=".handle">
+            <div className="window">
+                    <div className="buttons">
+                        <div className="close">
+                            <a onClick=
+                            // insert relavent onclick
+                            {handleAboutClick} 
+                            // insert above
+                            className="closebutton"><span><strong>x</strong></span></a>
                         </div>
-                        About
                     </div>
-                    <div className="no-cursor content">
-                        {/* insert content */}
-                    </div>
-                </div> 
-            </Draggable>  
-        </>
+                <div className="titlebar handle">
+                    About
+                </div>
+                <div className="no-cursor content">
+                    {/* [insert content] */}
+                </div>
+            </div> 
+        </Draggable> 
+    </>
     )
 }
 

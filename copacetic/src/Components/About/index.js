@@ -5,6 +5,7 @@ import './style.css'
 function About({isDisplayed, setIsDisplayed}) {
 
     const handleAboutClick = () => {
+        console.log('clicked')
         setIsDisplayed(!isDisplayed)
     }
 
@@ -12,12 +13,12 @@ function About({isDisplayed, setIsDisplayed}) {
         <>
             <Draggable handle=".handle">
                 <div className="window">
-                    <div className="titlebar handle">
                         <div className="buttons">
                             <div className="close">
                                 <a onClick={handleAboutClick} className="closebutton"><span><strong>x</strong></span></a>
                             </div>
                         </div>
+                    <div className="titlebar handle">
                         About
                     </div>
                     <div className="no-cursor content">
