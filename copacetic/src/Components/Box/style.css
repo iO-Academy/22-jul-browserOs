@@ -12,8 +12,8 @@ position: absolute;
 resize: both;
 overflow: auto;
 background: #fff;
-width: 300px;
-min-height: 300px;
+/* min-width: 300px;
+min-height: 300px; */
 margin-top: 12.5vh;
 border: 1px solid #acacac;
 border-radius: 6px;

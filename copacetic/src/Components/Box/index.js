@@ -14,7 +14,9 @@ function box({isDisplayed, setIsDisplayed}) {
                     <div className="titlebar handle">
                         <div className="buttons">
                             <div className="close">
+                                {/* update about click below for actual box */}
                                 <a onClick={handleAboutClick} className="closebutton"><span><strong>x</strong></span></a>
+                                {/* update above */}
                             </div>
                         </div>
                         About
