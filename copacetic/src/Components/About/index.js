@@ -5,22 +5,27 @@ import './style.css'
 function About({isDisplayed, setIsDisplayed}) {
 
     const handleAboutClick = () => {
+        console.log('clicked')
         setIsDisplayed(!isDisplayed)
     }
 
     return (
         <>
             <Draggable handle=".handle">
-                <div className="box">
-                    <div className="handle topBar">
-                        <p>About</p>
-                        <button onClick={handleAboutClick}>x</button>
+                <div className="window">
+                        <div className="buttons">
+                            <div className="close">
+                                <a onClick={handleAboutClick} className="closebutton"><span><strong>x</strong></span></a>
+                            </div>
+                        </div>
+                    <div className="titlebar handle">
+                        About
                     </div>
-                    <div className="no-cursor">
+                    <div className="no-cursor content">
                         <AboutContent />
                     </div>
-                </div>
-            </Draggable>    
+                </div> 
+            </Draggable> 
         </>
     )
 }
