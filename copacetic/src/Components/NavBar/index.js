@@ -10,7 +10,10 @@ function NavBar({showIcons, setShowIcons}) {
             <section className="container">
                 <div className="row navbar justify-content-between fixed-bottom px-5">
                     <FullScreen />
-                    <div onClick={()=> setShowIcons(!showIcons)}><MenuBtn /></div>
+                    <div onClick={()=> setShowIcons(!showIcons)}>
+                        <MenuBtn 
+                        showIcons={showIcons}/>
+                    </div>
                     <div><Clock /></div>
                 </div>
             </section>

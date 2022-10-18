@@ -23,7 +23,9 @@ function MainPage() {
             isDisplayed = {isDisplayed}
             setIsDisplayed = {setIsDisplayed}/>
             }
-            <NavBar setShowIcons={setShowIcons} showIcons={showIcons}/>
+            <NavBar 
+            setShowIcons={setShowIcons} 
+            showIcons={showIcons}/>
         </>
     )
 }
