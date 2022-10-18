@@ -19,6 +19,10 @@ const gifArray = [
     "https://media.giphy.com/media/wrzf9P70YWLJK/giphy.gif",
     "https://media.giphy.com/media/3oEjHLzm4BCF8zfPy0/giphy.gif",
     "https://media.giphy.com/media/TcdpZwYDPlWXC/giphy.gif"
-
 ]
 
+function shuffleArrayGetOne(){
+ shuffled = gifArray.shuffle
+ singleGifArray = shuflled.slice(1,1)
+ return singleGifArray.toString()
+}
