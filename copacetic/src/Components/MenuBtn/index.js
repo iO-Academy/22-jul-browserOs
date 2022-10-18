@@ -1,4 +1,3 @@
-import './style.css';
 import menuClosed from '../../images/triangle1.png';
 import menuOpen from '../../images/triangle2.png';
 
@@ -13,9 +12,9 @@ function MenuBtn({showIcons}) {
     }
 
     return (
-        <>
+        <div>
             { showIcons ? open() : closed() }
-        </>
+        </div>
     )
 }
 

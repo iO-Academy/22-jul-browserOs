@@ -14,7 +14,7 @@ function Clock() {
 
     return (
         <>  
-            <p className="clock pt-3 blockquote"> {date.toLocaleTimeString()} </p>
+            <p className="clock blockquote"> {date.toLocaleTimeString()} </p>
         </>
     )
 }

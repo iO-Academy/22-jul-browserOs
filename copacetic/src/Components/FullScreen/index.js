@@ -43,9 +43,9 @@ function FullScreen() {
     }
 
     return (
-        <>
+        <div>
             { isFullscreen ? reduce() : expand() }
-        </>
+        </div>
     )
 }
 
