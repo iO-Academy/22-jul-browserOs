@@ -5,7 +5,6 @@ import './style.css'
 function About({isDisplayed, setIsDisplayed}) {
 
     const handleAboutClick = () => {
-        console.log('clicked')
         setIsDisplayed(!isDisplayed)
     }
 

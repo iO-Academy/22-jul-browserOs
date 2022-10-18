@@ -31,13 +31,17 @@ function MainPage() {
                 {showIcons && 
                 <Icons 
                 isDisplayed = {isDisplayed}
-                setIsDisplayed = {setIsDisplayed}/>
+                setIsDisplayed = {setIsDisplayed}
+                isGifDisplayed = {isGifDisplayed}
+                setIsGifDisplayed = {setIsGifDisplayed}/>
                 }
             </div>
             {showIcons && 
             <Icons 
             isDisplayed = {isDisplayed}
-            setIsDisplayed = {setIsDisplayed}/>
+            setIsDisplayed = {setIsDisplayed}
+            isGifDisplayed = {isGifDisplayed}
+            setIsGifDisplayed = {setIsGifDisplayed}/>
             }
             <NavBar 
             setShowIcons={setShowIcons} 

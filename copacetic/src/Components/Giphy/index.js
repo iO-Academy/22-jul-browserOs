@@ -21,7 +21,7 @@ function box({isGifDisplayed, setIsGifDisplayed}) {
                     Giphy
                 </div>
                 <div className="no-cursor content">
-                    <GetAGif />
+                    <img src={GetAGif()}></img>
                 </div>
             </div> 
         </Draggable> 
