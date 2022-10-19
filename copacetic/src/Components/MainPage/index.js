@@ -15,6 +15,7 @@ function MainPage() {
     const {theme, setTheme} = useContext(ThemeContext)
 
     const themeClass = theme + ' background'
+    const themeClass2 = theme + ' containerbackground'
 
     useEffect(() => {
         document.body.className = ''
@@ -24,6 +25,9 @@ function MainPage() {
     return (
         <>
             <div className={themeClass}>
+                <div class={themeClass2}>
+                <p>Cuthbert</p>
+                </div>
                 {isDisplayed &&
                     <About 
                     isDisplayed = {isDisplayed}

@@ -25,14 +25,39 @@ body.cuttle {
 	font-family: 'Open Sans';
 }
 
+body.cuthbert {
+	background-color: #21002F;
+	font-family: 'Arial Black';
+	color: #21002F;
+	position: relative;
+}
+
+.containerbackground.cuttle {
+	display: none;
+}
 
 .background.cuthbert {
 	height: 70vh;
 	background-color: #21002F;
 }
 
-body.cuthbert {
-	background-color: #21002F;
+.containerbackground.cuthbert {
+	position: absolute;
+	left: 0; 
+	right: 0; 
+	margin-left: auto; 
+	margin-right: auto;
+	width: 100;
+}
+
+.containerbackground p {
+	font-size: 150px;
+	letter-spacing: 3px;
 	font-family: 'Arial Black';
-	color: #21002F
+	font-weight: 900;
+	text-transform: uppercase;
+	color: #B8A3FA;
+	-webkit-text-stroke-width: 2px;
+	-webkit-text-stroke-color: #ffffff;
+	text-shadow: 6px 8px 0px #E60000;
 }
