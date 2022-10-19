@@ -8,7 +8,7 @@ import { useContext } from 'react'
 function NavBar({showIcons, setShowIcons}) {
     
     const {theme} = useContext(ThemeContext)
-    const themeNavStyling = theme + ' row fixed-bottom px-4 pt-4'
+    const themeNavStyling = theme + ' row fixed-bottom px-4 pt-4 navBackground'
 
     return (
         <>

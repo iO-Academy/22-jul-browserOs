@@ -1,13 +1,14 @@
 import './styles.css'
-import menuClosedBlack from '../../images/triangleOpenBlack.png';
-import menuClosedWhite from '../../images/triangleOpenWhite.png'
-import menuOpen from '../../images/triangle2.png';
 import ThemeContext from '../../Contexts/ThemeContext'
 import { useContext } from 'react'
 
+import menuClosedBlack from '../../images/triangleClosedBlack.png';
+import menuClosedWhite from '../../images/triangleClosedWhite.png'; 
+import menuOpenBlack from '../../images/triangleOpenBlack.png'; 
+import menuOpenWhite from '../../images/triangleOpenWhite.png'
+
 function MenuBtn({showIcons}) {
     const {theme} = useContext(ThemeContext)
-    // const themeNavStyling = theme + ' row fixed-bottom px-4 pt-4'
 
     const closed = () => {
         if(theme === 'cuttle') {
@@ -21,11 +22,11 @@ function MenuBtn({showIcons}) {
 
     const open = () => {
         if(theme === 'cuttle') {
-            return <img className="menuImg" src={menuOpen}></img>
+            return <img className="menuImg" src={menuOpenBlack}></img>
         } else if (theme === 'cuthbert') { 
-            return 
+            return <img className="menuImg" src={menuOpenWhite}></img>
         } else {
-            return <img className="menuImg" src={menuOpen}></img>
+            return <img className="menuImg" src={menuOpenBlack}></img>
         }
     }
 
