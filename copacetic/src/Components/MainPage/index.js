@@ -22,18 +22,20 @@ function MainPage() {
                 }
 
                     <div>
-                    <ReactPlayer
-                        url="https://soundcloud.com/user-894394120-615016070/miss-you"
-                        volume={0.2}
-                    />
                     </div>
-
                 {isGifDisplayed &&
                     <Giphy 
                     isGifDisplayed = {isGifDisplayed}
                     setIsGifDisplayed = {setIsGifDisplayed}/>
                 }
 
+                {isGifDisplayed &&
+                    <ReactPlayer
+                    url="https://soundcloud.com/user-894394120-615016070/miss-you"
+                    volume={0.2}
+                    isMusicDisplayed = {isMusicDisplayed}
+                    setIsMusicDisplayed = {setIsMusicDisplayed}/>
+                }   
             </div>
             <div>
                 {showIcons && 
@@ -41,7 +43,9 @@ function MainPage() {
                 isDisplayed = {isDisplayed}
                 setIsDisplayed = {setIsDisplayed}
                 isGifDisplayed = {isGifDisplayed}
-                setIsGifDisplayed = {setIsGifDisplayed}/>
+                setIsGifDisplayed = {setIsGifDisplayed}
+                isMusicDisplayed = {isMusicDisplayed}
+                setIsMusicDisplayed = {setIsMusicDisplayed}/>
                 }
             </div>
             {showIcons && 
