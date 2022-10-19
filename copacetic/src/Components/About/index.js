@@ -1,17 +1,21 @@
 import AboutContent from "../AboutContent"
 import Draggable from 'react-draggable';
 import './style.css'
+import { useState } from "react";
 
-function About({isDisplayed, setIsDisplayed}) {
+function About({currentlyActive, setCurrentlyActiveWindow, isDisplayed, setIsDisplayed}) {
 
     const handleAboutClick = () => {
         setIsDisplayed(!isDisplayed)
     }
 
+
+    let aboutClassName = 'window ' + (currentlyActive ? 'selected' : '')
+
     return (
         <>
-            <Draggable handle=".handle">
-                <div className="window">
+            <Draggable handle=".handle" onMouseDown={() => setCurrentlyActiveWindow('about')}>
+                <div className={aboutClassName} >
                         <div className="buttons">
                             <div className="close">
                                 <a onClick={handleAboutClick} className="closebutton"><span><strong>x</strong></span></a>
