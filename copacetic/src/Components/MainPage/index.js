@@ -4,7 +4,7 @@ import './styles.css';
 import About from "../About";
 import Icons from "../Icons";
 import Giphy from "../Giphy";
-import ReactAudioPlayer from 'react-audio-player';
+import ReactPlayer from "react-player"
 
 
 function MainPage() {
@@ -21,6 +21,12 @@ function MainPage() {
                     setIsDisplayed = {setIsDisplayed}/>
                 }
 
+                    <div>
+                    <ReactPlayer
+                        url="https://soundcloud.com/user-894394120-615016070/miss-you"
+                        volume={0.2}
+                    />
+                    </div>
 
                 {isGifDisplayed &&
                     <Giphy 
@@ -29,11 +35,6 @@ function MainPage() {
                 }
 
             </div>
-            <ReactAudioPlayer
-                src="OSMusic.mp3"
-                
-                controls
-            />  
             <div>
                 {showIcons && 
                 <Icons 
