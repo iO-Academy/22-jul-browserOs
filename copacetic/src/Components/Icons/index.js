@@ -1,5 +1,11 @@
 import './styles.css'
-function Icons({isDisplayed, setIsDisplayed, isThemeDisplayed, setIsThemeDisplayed, themeIconStyling}) {
+import ThemeContext from '../../Contexts/ThemeContext'
+import { useContext } from 'react'
+
+function Icons({isDisplayed, setIsDisplayed, isThemeDisplayed, setIsThemeDisplayed}) {
+
+    const {theme} = useContext(ThemeContext)
+    const themeIconStyling = theme + ' overlay'
 
     const handleAboutClick = () => {
         setIsDisplayed(!isDisplayed)

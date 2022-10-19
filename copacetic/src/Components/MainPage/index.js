@@ -15,8 +15,6 @@ function MainPage() {
     const {theme, setTheme} = useContext(ThemeContext)
 
     const themeClass = theme + ' background'
-    const themeIconStyling = theme + ' overlay'
-    const themeNavStyling = theme + ' row fixed-bottom px-4 pt-4 navBackground'
 
     useEffect(() => {
         document.body.className = ''
@@ -44,12 +42,11 @@ function MainPage() {
             setIsDisplayed = {setIsDisplayed}
             isThemeDisplayed = {isThemeDisplayed}
             setIsThemeDisplayed = {setIsThemeDisplayed}
-            themeIconStyling = {themeIconStyling}/>
+            />
             }
             <NavBar 
             setShowIcons={setShowIcons} 
             showIcons={showIcons}
-            themeNavStyling={themeNavStyling}
             />
         </>
     )
