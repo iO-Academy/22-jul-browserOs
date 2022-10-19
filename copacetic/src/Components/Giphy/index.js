@@ -2,32 +2,20 @@ import Draggable from 'react-draggable';
 import GetAGif from '../GetAGif';
 import './style.css'
 
-function box({isGifDisplayed, setIsGifDisplayed}) {
+function Giphy({currentlyActive, setCurrentlyActiveWindow, isGifDisplayed, setIsGifDisplayed}) {
 
     const handleGifClick = () => {
         setIsGifDisplayed(!isGifDisplayed)
     }
 
+    let aboutClassName = 'window ' + (currentlyActive ? 'selected' : '')
+
     return (
         <>
-        <Draggable handle=".handle">
-            <div className="window">
-                    <div className="buttons">
-                        <div className="close">
-                            <a onClick={handleGifClick} className="closebutton"><span><strong>x</strong></span></a>
-                        </div>
-                    </div>
-                <div className="titlebar handle">
-                    Giphy
-                </div>
-                <div className="no-cursor content">
-                    <img src={GetAGif()}></img>
-                </div>
-            </div> 
-        </Draggable> 
-    </>
+            <img src={GetAGif()}></img> 
+        </>
     )
 }
 
-export default box
+export default Giphy
 

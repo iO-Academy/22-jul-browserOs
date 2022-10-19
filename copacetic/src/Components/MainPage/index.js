@@ -5,38 +5,59 @@ import About from "../About";
 import Icons from "../Icons";
 import Giphy from "../Giphy";
 import ReactPlayer from "react-player"
-
+import Box from "../Box";
+import Music from "../Music";
 
 function MainPage() {
 
     const [isDisplayed, setIsDisplayed] = useState(false)
     const [isGifDisplayed, setIsGifDisplayed] = useState(false)
+    const [currentlyActiveWindow, setCurrentlyActiveWindow] = useState(null)
     const [showIcons, setShowIcons] = useState(false)
+    const [isWindowTitle, setWindowTitle] = useState(null)
+    const [isMusicDisplayed, setIsMusicDisplayed] = useState(false)
+    const aboutTitle = 'about'
+    const giphyTitle = 'giphy'
+    const musicTitle = 'music'
+    
+
     return (
         <>
             <div className="background">
                 {isDisplayed &&
-                    <About 
-                    isDisplayed = {isDisplayed}
-                    setIsDisplayed = {setIsDisplayed}/>
-                }
-
-                    <div>
-                    </div>
-                {isGifDisplayed &&
-                    <Giphy 
-                    isGifDisplayed = {isGifDisplayed}
-                    setIsGifDisplayed = {setIsGifDisplayed}/>
+                    <Box
+                        isWindowTitle = {aboutTitle}
+                        currentlyActive = {currentlyActiveWindow === 'about' ? true : false}
+                        setCurrentlyActiveWindow = {setCurrentlyActiveWindow}
+                        isDisplayed = {isDisplayed}
+                        setIsDisplayed = {setIsDisplayed}>
+                        <About />
+                    </Box>
                 }
 
                 {isGifDisplayed &&
-                    <ReactPlayer
-                    url="https://soundcloud.com/user-894394120-615016070/miss-you"
-                    volume={0.2}
-                    isMusicDisplayed = {isMusicDisplayed}
-                    setIsMusicDisplayed = {setIsMusicDisplayed}/>
+                    <Box
+                        isWindowTitle = {giphyTitle}
+                        currentlyActive = {currentlyActiveWindow === 'giphy' ? true : false}
+                        setCurrentlyActiveWindow = {setCurrentlyActiveWindow}
+                        isDisplayed = {isGifDisplayed}
+                        setIsDisplayed = {setIsGifDisplayed}>
+                        <Giphy />
+                    </Box>
+                }
+
+                {isMusicDisplayed &&
+                    <Box
+                        isWindowTitle = {musicTitle}
+                        currentlyActive = {currentlyActiveWindow === 'music' ? true : false}
+                        setCurrentlyActiveWindow = {setCurrentlyActiveWindow}
+                        isDisplayed = {isMusicDisplayed}
+                        setIsDisplayed = {setIsMusicDisplayed}>
+                        <Music />
+                    </Box>
                 }   
             </div>
+
             <div>
                 {showIcons && 
                 <Icons 
@@ -53,7 +74,9 @@ function MainPage() {
             isDisplayed = {isDisplayed}
             setIsDisplayed = {setIsDisplayed}
             isGifDisplayed = {isGifDisplayed}
-            setIsGifDisplayed = {setIsGifDisplayed}/>
+            setIsGifDisplayed = {setIsGifDisplayed}
+            isMusicDisplayed = {isMusicDisplayed}
+            setIsMusicDisplayed = {setIsMusicDisplayed}/>
             }
             <NavBar 
             setShowIcons={setShowIcons} 
