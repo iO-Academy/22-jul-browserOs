@@ -29,24 +29,5 @@ const Box = ({children, currentlyActive, setCurrentlyActiveWindow, isDisplayed, 
         </>
     )
 }
-// <Draggable handle=".handle">
-//     <div className="window">
-//             <div className="buttons">
-//                 <div className="close">
-//                     <a onClick=
-//                     // insert relavent onclick
-//                     {handleAboutClick} 
-//                     // insert above
-//                     className="closebutton"><span><strong>x</strong></span></a>
-//                 </div>
-//             </div>
-//         <div className="titlebar handle">
-//             About
-//         </div>
-//         <div className="no-cursor content">
-            
-//         </div>
-//     </div> 
-// </Draggable> 
 
 export default Box
