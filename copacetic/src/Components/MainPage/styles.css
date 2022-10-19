@@ -1,10 +1,3 @@
-/* #root {
-	background: linear-gradient(-45deg, #f7c547, #e73c50, #23a6d5, #23d5ab);
-	background-size: 400% 400%;
-	animation: gradient 15s ease infinite;
-	height: 100vh;
-} */
-
 @keyframes gradient {
 	0% {
 		background-position: 0% 50%;
@@ -17,7 +10,7 @@
 	}
 }
 
-.background {
+.background.cuttle {
 	height: 70vh;
 	background: url('../../images/cuttlefish-image.png');
 	background-repeat: no-repeat;
@@ -25,17 +18,22 @@
 	background-size: contain;
 }
 
-body[data-theme="theme2"] {
-	background-color: #ea7f7f;
-	font-family:'Times New Roman', Times, serif;
-} 
-
-body[data-theme="cuttleFish"] {
+body.cuttle {
 	background: linear-gradient(-45deg, #f7c547, #e73c50, #23a6d5, #23d5ab);
 	background-size: 400% 400%;
 	animation: gradient 15s ease infinite;
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: Arial, Helvetica, sans-serif;;
 }
 
 
+.background.cuthbert {
+	height: 70vh;
+	background-color: #21002F;
 
+}
+
+body.cuthbert {
+	background-color: #21002F;
+	font-family: 'Arial Black';
+	color: #21002F
+}

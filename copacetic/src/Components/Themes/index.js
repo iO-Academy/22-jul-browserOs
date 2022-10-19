@@ -1,21 +1,11 @@
 import Draggable from 'react-draggable';
 import './style.css'
+import ThemeContext from "../../Contexts/ThemeContext";
 
-function Themes({isThemeDisplayed, setIsThemeDisplayed}) {
+function Themes({isThemeDisplayed, setIsThemeDisplayed, setTheme}) {
 
     const handleThemeClick = () => {
         setIsThemeDisplayed(!isThemeDisplayed)
-    }
-
-    //Click event 
-    //when theme 2 is clicked: background needs to change. 
-
-    const handleCuttleClick = () => {
-        document.body.setAttribute("data-theme", "cuttleFish")
-    }
-
-    const handleTheme2Click = () => {
-        document.body.setAttribute("data-theme", "theme2")
     }
 
     return (
@@ -31,10 +21,10 @@ function Themes({isThemeDisplayed, setIsThemeDisplayed}) {
                         Themes
                     </div>
                     <div className="no-cursor content">
-                            <div onClick={handleCuttleClick} className="col-12 pointer border-bottom">
+                            <div onClick={()=>setTheme('cuttle')} className="col-12 pointer border-bottom">
                                 <p className="fw-bolder">Cuttlefish</p>
                             </div>
-                            <div onClick={handleTheme2Click} className="fw-bold col-12 pt-3 pointer border-bottom">
+                            <div onClick={()=>setTheme('cuthbert')} className="fw-bold col-12 pt-3 pointer border-bottom">
                                 <p className="fw-bolder">Theme 2</p>
                             </div>
                     </div>
