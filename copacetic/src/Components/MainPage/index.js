@@ -10,19 +10,27 @@ function MainPage() {
     const [isDisplayed, setIsDisplayed] = useState(false)
     const [isGifDisplayed, setIsGifDisplayed] = useState(false)
     const [showIcons, setShowIcons] = useState(false)
+    const [currentlyActiveWindow, setCurrentlyActiveWindow] = useState(null)
+
     return (
         <>
             <div className="background">
                 {isDisplayed &&
                     <About 
+                    currentlyActive = {currentlyActiveWindow === 'about' ? true : false}
+                    setCurrentlyActiveWindow = {setCurrentlyActiveWindow}
                     isDisplayed = {isDisplayed}
-                    setIsDisplayed = {setIsDisplayed}/>
+                    setIsDisplayed = {setIsDisplayed}
+                    />
                 }
 
                 {isGifDisplayed &&
                     <Giphy 
+                    currentlyActive = {currentlyActiveWindow === 'giphy' ? true : false}
+                    setCurrentlyActiveWindow = {setCurrentlyActiveWindow}
                     isGifDisplayed = {isGifDisplayed}
-                    setIsGifDisplayed = {setIsGifDisplayed}/>
+                    setIsGifDisplayed = {setIsGifDisplayed}
+                    />
                 }
 
             </div>
