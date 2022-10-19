@@ -25,7 +25,7 @@ function Themes({isThemeDisplayed, setIsThemeDisplayed, setTheme}) {
                                 <p className="fw-bolder">Cuttlefish</p>
                             </div>
                             <div onClick={()=>setTheme('cuthbert')} className="fw-bold col-12 pt-3 pointer border-bottom">
-                                <p className="fw-bolder">Theme 2</p>
+                                <p className="fw-bolder">Cuthbert</p>
                             </div>
                     </div>
                 </div> 
