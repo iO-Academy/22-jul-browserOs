@@ -4,6 +4,8 @@ import './styles.css';
 import About from "../About";
 import Icons from "../Icons";
 import Giphy from "../Giphy";
+import ReactAudioPlayer from 'react-audio-player';
+
 
 function MainPage() {
 
@@ -19,6 +21,7 @@ function MainPage() {
                     setIsDisplayed = {setIsDisplayed}/>
                 }
 
+
                 {isGifDisplayed &&
                     <Giphy 
                     isGifDisplayed = {isGifDisplayed}
@@ -26,7 +29,11 @@ function MainPage() {
                 }
 
             </div>
-
+            <ReactAudioPlayer
+                src="OSMusic.mp3"
+                
+                controls
+            />  
             <div>
                 {showIcons && 
                 <Icons 
