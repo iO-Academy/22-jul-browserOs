@@ -25,33 +25,36 @@ body.cuttle {
 	font-family: 'Open Sans';
 }
 
+.containerbackground.cuttle {
+	display: none;
+}
+
 body.cuthbert {
 	background-color: #21002F;
 	font-family: 'Arial Black';
 	color: #21002F;
 	position: relative;
 }
-
-.containerbackground.cuttle {
-	display: none;
-}
-
 .background.cuthbert {
 	height: 70vh;
 	background-color: #21002F;
 }
-
+/* 
 .containerbackground.cuthbert {
 	position: absolute;
 	left: 0; 
 	right: 0; 
 	margin-left: auto; 
 	margin-right: auto;
-	width: 100;
-}
+	width: 100vh;
 
-.containerbackground p {
-	font-size: 150px;
+} */
+
+.containerbackground .title {
+	color: white;
+	padding-top: 10px;
+	text-align: center;
+	/* font-size: 150px; */
 	letter-spacing: 3px;
 	font-family: 'Arial Black';
 	font-weight: 900;
@@ -60,4 +63,10 @@ body.cuthbert {
 	-webkit-text-stroke-width: 2px;
 	-webkit-text-stroke-color: #ffffff;
 	text-shadow: 6px 8px 0px #E60000;
+}
+
+.containerbackground .p1 {
+	text-align: center;
+	color: #ffffff;
+
 }

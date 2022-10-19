@@ -26,7 +26,18 @@ function MainPage() {
         <>
             <div className={themeClass}>
                 <div class={themeClass2}>
-                <p>Cuthbert</p>
+                    <div className='row'>
+                        <div className="col-12">
+                            <p className="title display-1 text-wrap">Cuthbert</p>
+                        </div>
+                    </div>
+                    {/* <div className="row">
+                        <div className="col-12 p1">
+                            <p>age: 99, Fave Food: Pizza</p>
+                        </div>
+                        <div className="col-12 p1">
+                            <p>Is testing really needed? Have we checked with the PO? Damn, does the PO need to see the wireframe? What is git? commit message what?</p>
+                    </div> */}
                 </div>
                 {isDisplayed &&
                     <About 
