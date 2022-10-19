@@ -5,6 +5,7 @@ import './style.css'
 
 function AboutContent() {
 
+
     return (
     
         <div className="contentBox"> 

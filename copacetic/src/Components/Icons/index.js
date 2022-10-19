@@ -1,8 +1,14 @@
 import './styles.css'
-function Icons({isDisplayed, setIsDisplayed}) {
+
+function Icons({isDisplayed, setIsDisplayed, isGifDisplayed, setIsGifDisplayed}) {
 
     const handleAboutClick = () => {
         setIsDisplayed(!isDisplayed)
+    }
+
+    const handleGifClick = () => {
+        console.log('clicked')
+        setIsGifDisplayed(!isGifDisplayed)
     }
 
     return (
@@ -16,7 +22,7 @@ function Icons({isDisplayed, setIsDisplayed}) {
                         <h1 className="text-center mb-0 px-3 font-weight-bold mt-1">T</h1>
                         <p className="text-center">Themes</p>
                     </div>
-                    <div className="iconBackground col border rounded m-3 pointer">
+                    <div onClick={handleGifClick} className="iconBackground col border rounded m-3 pointer">
                         <h1 className="text-center mb-0 px-3 font-weight-bold mt-1">G</h1>
                         <p className="text-center">Giphy</p>
                     </div>
