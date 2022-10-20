@@ -27,6 +27,9 @@ function Themes({isThemeDisplayed, setIsThemeDisplayed, setTheme}) {
                             <div onClick={()=>setTheme('cuthbert')} className="fw-bold col-12 pt-3 pointer border-bottom">
                                 <p className="fw-bolder">Cuthbert</p>
                             </div>
+                            <div onClick={()=>setTheme('wave')} className="fw-bold col-12 pt-3 pointer border-bottom">
+                                <p className="fw-bolder">wave</p>
+                            </div>
                     </div>
                 </div> 
             </Draggable> 

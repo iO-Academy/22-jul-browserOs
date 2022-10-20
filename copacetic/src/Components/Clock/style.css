@@ -13,3 +13,7 @@
     min-height: 40px;
 }
 
+.wave p.clock {
+    color: rgb(0, 0, 0);
+    min-height: 40px;
+}
