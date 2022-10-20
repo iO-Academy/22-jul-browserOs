@@ -14,7 +14,7 @@ function AboutContent() {
                 </div>
                 <div className="row d-flex justify-content-center align-items-center py-3">
                     <div>
-                        <p className="px-3">Emily</p>
+                        <p className="px-3 bold">Emily</p>
                         <a href="https://github.com/erc-clarkson" className="m-3">Github</a>
                     </div>
                     <div>
@@ -23,7 +23,7 @@ function AboutContent() {
                 </div>
                 <div className="row d-flex justify-content-center align-items-center py-3">
                     <div>
-                        <p className="px-3">Joe</p>
+                        <p className="px-3 bold">Joe</p>
                         <a href="https://github.com/Jdixon04" className="m-3">Github</a>
                     </div>
                     <div>
@@ -32,7 +32,7 @@ function AboutContent() {
                 </div>
                 <div className="row d-flex justify-content-center align-items-center py-3">
                     <div>
-                        <p className="px-3">Josh</p>
+                        <p className="px-3 bold">Josh</p>
                         <a href="https://github.com/josh-lew" className="m-3">Github</a>
                     </div>
                     <div>
