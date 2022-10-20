@@ -10,26 +10,8 @@ function Themes({isThemeDisplayed, setIsThemeDisplayed, setTheme}) {
 
     return (
         <>
-            <Draggable handle=".handle">
-                <div className="window">
-                        <div className="buttons">
-                            <div className="close">
-                                <a onClick={handleThemeClick} className="closebutton"><span><strong>x</strong></span></a>
-                            </div>
-                        </div>
-                    <div className="titlebar handle">
-                        Themes
-                    </div>
-                    <div className="no-cursor content">
-                            <div onClick={()=>setTheme('cuttle')} className="col-12 pointer border-bottom">
-                                <p className="fw-bolder">Cuttlefish</p>
-                            </div>
-                            <div onClick={()=>setTheme('cuthbert')} className="fw-bold col-12 pt-3 pointer border-bottom">
-                                <p className="fw-bolder">Cuthbert</p>
-                            </div>
-                    </div>
-                </div> 
-            </Draggable> 
+            <button onClick={()=>setTheme('cuttle')} className="btn cuttleBtn col-12 text-white pointer my-3">Cuttlefish</button>
+            <button onClick={()=>setTheme('cuthbert')} className="btn cuthBtn fw-bold col-12 text-white pointer my-3">Cuthbert</button>
         </>
     )
 }

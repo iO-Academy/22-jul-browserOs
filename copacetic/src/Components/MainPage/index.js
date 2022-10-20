@@ -11,6 +11,7 @@ import Box from "../Box";
 import Music from "../Music";
 import Quotlefish from "../Quotlefish";
 
+
 function MainPage() {
 
     const [isDisplayed, setIsDisplayed] = useState(false)
@@ -25,6 +26,7 @@ function MainPage() {
     const giphyTitle = 'giphy'
     const musicTitle = 'music'
     const quotleTitle = 'quotlefish'
+    const themesTitle = 'themes'
     const {theme, setTheme} = useContext(ThemeContext)
     const themeClass = theme + ' background'
 
@@ -44,6 +46,18 @@ function MainPage() {
                         isDisplayed = {isDisplayed}
                         setIsDisplayed = {setIsDisplayed}>
                         <About />
+                    </Box>
+                }
+
+                {isThemeDisplayed &&
+                    <Box
+                        isWindowTitle = {themesTitle}
+                        currentlyActive = {currentlyActiveWindow === 'about' ? true : false}
+                        setCurrentlyActiveWindow = {setCurrentlyActiveWindow}isDisplayed = {isThemeDisplayed}
+                        setIsDisplayed = {setIsThemeDisplayed}
+                        setTheme = {setTheme}>
+                        <Themes 
+                        setTheme = {setTheme}/>
                     </Box>
                 }
 
@@ -92,12 +106,6 @@ function MainPage() {
                 isQuotleDisplayed = {isQuotleDisplayed}
                 setIsQuotleDisplayed = {setIsQuotleDisplayed}/>
                 }
-                {isThemeDisplayed &&
-                    <Themes 
-                    isThemeDisplayed = {isThemeDisplayed}
-                    setIsThemeDisplayed = {setIsThemeDisplayed}
-                    setTheme = {setTheme}/>
-                }
             </div>
             {showIcons && 
             <Icons 
@@ -112,7 +120,7 @@ function MainPage() {
             isQuotleDisplayed = {isQuotleDisplayed}
             setIsQuotleDisplayed = {setIsQuotleDisplayed}/>
             }
-            
+
             <NavBar 
             setShowIcons={setShowIcons} 
             showIcons={showIcons}
