@@ -10,21 +10,24 @@ import ReactPlayer from "react-player"
 import Box from "../Box";
 import Music from "../Music";
 import Quotlefish from "../Quotlefish";
+import Bisquids from "../Bisquids";
 
 function MainPage() {
 
+    const [showIcons, setShowIcons] = useState(false)
+    const [isWindowTitle, setWindowTitle] = useState(null)
     const [isDisplayed, setIsDisplayed] = useState(false)
     const [isThemeDisplayed, setIsThemeDisplayed] = useState(false)
     const [isGifDisplayed, setIsGifDisplayed] = useState(false)
     const [currentlyActiveWindow, setCurrentlyActiveWindow] = useState(null)
-    const [showIcons, setShowIcons] = useState(false)
-    const [isWindowTitle, setWindowTitle] = useState(null)
     const [isMusicDisplayed, setIsMusicDisplayed] = useState(false)
     const [isQuotleDisplayed, setIsQuotleDisplayed] = useState(false)
+    const [isBisquidsDisplayed, setIsBisquidsDisplayed] = useState(false)
     const aboutTitle = 'about'
     const giphyTitle = 'giphy'
     const musicTitle = 'music'
     const quotleTitle = 'quotlefish'
+    const bisquidsTitle = 'bisquids'
     const {theme, setTheme} = useContext(ThemeContext)
     const themeClass = theme + ' background'
 
@@ -77,7 +80,17 @@ function MainPage() {
                         setIsDisplayed = {setIsQuotleDisplayed}>
                         <Quotlefish />
                     </Box>
-                }   
+                }
+                {isBisquidsDisplayed &&
+                    <Box
+                        isWindowTitle = {bisquidsTitle}
+                        currentlyActive = {currentlyActiveWindow === 'bisquids' ? true : false}
+                        setCurrentlyActiveWindow = {setCurrentlyActiveWindow}
+                        isDisplayed = {isBisquidsDisplayed}
+                        setIsDisplayed = {setIsBisquidsDisplayed}>
+                        <Bisquids />
+                    </Box>
+                }      
             </div>
 
             <div>
@@ -90,7 +103,9 @@ function MainPage() {
                 isMusicDisplayed = {isMusicDisplayed}
                 setIsMusicDisplayed = {setIsMusicDisplayed}
                 isQuotleDisplayed = {isQuotleDisplayed}
-                setIsQuotleDisplayed = {setIsQuotleDisplayed}/>
+                setIsQuotleDisplayed = {setIsQuotleDisplayed}
+                isBisquidsDisplayed = {isBisquidsDisplayed}
+                setIsBisquidsDisplayed = {setIsBisquidsDisplayed}/>
                 }
                 {isThemeDisplayed &&
                     <Themes 
@@ -110,7 +125,9 @@ function MainPage() {
             isMusicDisplayed = {isMusicDisplayed}
             setIsMusicDisplayed = {setIsMusicDisplayed}
             isQuotleDisplayed = {isQuotleDisplayed}
-            setIsQuotleDisplayed = {setIsQuotleDisplayed}/>
+            setIsQuotleDisplayed = {setIsQuotleDisplayed}
+            isBisquidsDisplayed = {isBisquidsDisplayed}
+            setIsBisquidsDisplayed = {setIsBisquidsDisplayed}/>
             }
             
             <NavBar 
