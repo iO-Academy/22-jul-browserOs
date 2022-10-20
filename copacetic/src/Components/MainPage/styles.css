@@ -11,11 +11,29 @@
 }
 
 .background.cuttle {
-	height: 70vh;
+	height: 90vh;
 	background: url('../../images/cuttlefish-image.png');
 	background-repeat: no-repeat;
 	background-position: center;
-	background-size: contain;
+	background-size: 35%;
+}
+
+@media only screen and (max-width: 1700px) {
+	.background.cuttle {
+		background-size: 50%;
+	}
+}
+
+@media only screen and (max-width: 900px) {
+	.background.cuttle {
+		background-size: 90%;
+	}
+}
+
+@media only screen and (max-width: 500px) {
+	.background.cuttle {
+		background-size: 95%;
+	}
 }
 
 #root.cuttle {
@@ -40,3 +58,10 @@
 	background-size: 85%;
 }
 
+#root.wave {
+	background: url("https://media.giphy.com/media/xWMPYx55WNhX136T0V/giphy.gif");
+	font-family: 'Arial Black';
+	color: #000000;
+	background-repeat: no-repeat;
+	background-size: cover;
+}

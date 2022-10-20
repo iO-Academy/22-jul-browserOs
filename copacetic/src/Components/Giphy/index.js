@@ -4,7 +4,7 @@ import './style.css'
 function Giphy() {
 
     return (
-        <img className="gif" src={GetAGif()}></img> 
+        <img className="giphyImg"src={GetAGif()}></img> 
     )
 }
 

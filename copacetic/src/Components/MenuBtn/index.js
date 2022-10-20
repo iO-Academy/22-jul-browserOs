@@ -11,21 +11,21 @@ function MenuBtn({showIcons}) {
 
     const closed = () => {
         if(theme === 'cuttle') {
-            return <img className="menuImg" src={menuClosedBlack}></img>
+            return <img className="menuImg" src={menuClosedBlack} alt="Menu"></img>
         } else if (theme === 'cuthbert') { 
-            return <img className="menuImg" src={menuClosedWhite}></img>
+            return <img className="menuImg" src={menuClosedWhite} alt="Menu"></img>
         } else {
-            return <img className="menuImg" src={menuClosedBlack}></img>
+            return <img className="menuImg" src={menuClosedBlack} alt="Menu"></img>
         }
     }
 
     const open = () => {
         if(theme === 'cuttle') {
-            return <img className="menuImg" src={menuOpenBlack}></img>
+            return <img className="menuImg" src={menuOpenBlack} alt="Menu"></img>
         } else if (theme === 'cuthbert') { 
-            return <img className="menuImg" src={menuOpenWhite}></img>
+            return <img className="menuImg" src={menuOpenWhite} alt="Menu"></img>
         } else {
-            return <img className="menuImg" src={menuOpenBlack}></img>
+            return <img className="menuImg" src={menuOpenBlack} alt="Menu"></img>
         }
     }
 
