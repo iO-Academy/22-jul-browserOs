@@ -13,7 +13,6 @@ span {
     overflow: auto;
     background: #fff;
     width: 300px;
-    min-height: 300px;
     margin-top: 12.5vh;
     border: 1px solid #acacac;
     border-radius: 6px;
@@ -87,4 +86,14 @@ span {
 .content {
     padding: 20px;
     overflow: scroll;
+}
+
+.cuthBtn {
+    background-color: #21002f;
+    color: #ffffff;
+}
+
+.cuttleBtn {
+    background-color: #23a8d3;
+    color: #ffffff;
 }
