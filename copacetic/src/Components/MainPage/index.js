@@ -55,7 +55,7 @@ function MainPage() {
                     <Box
                         isWindowTitle = {themesTitle}
                         currentlyActive = {currentlyActiveWindow === 'about' ? true : false}
-                        setCurrentlyActiveWindow = {setCurrentlyActiveWindow}isDisplayed = {isThemeDisplayed}
+                        setCurrentlyActiveWindow = {setCurrentlyActiveWindow} isDisplayed = {isThemeDisplayed}
                         setIsDisplayed = {setIsThemeDisplayed}
                         setTheme = {setTheme}>
                         <Themes 

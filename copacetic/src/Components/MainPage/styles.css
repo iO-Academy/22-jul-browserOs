@@ -40,3 +40,10 @@
 	background-size: 85%;
 }
 
+#root.wave {
+	background: url("https://media.giphy.com/media/xWMPYx55WNhX136T0V/giphy.gif");
+	font-family: 'Arial Black';
+	color: #000000;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
