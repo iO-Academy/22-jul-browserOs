@@ -26,7 +26,7 @@ function MainPage() {
     const giphyTitle = 'giphy'
     const musicTitle = 'music'
     const quotleTitle = 'quotlefish'
-    const themesTitle = 'themes'
+    const themesTitle = 'theme'
     const bisquidsTitle = 'bisquids'
     const {theme, setTheme} = useContext(ThemeContext)
     const themeClass = theme + ' background'
@@ -54,7 +54,7 @@ function MainPage() {
                 {isThemeDisplayed &&
                     <Box
                         isWindowTitle = {themesTitle}
-                        currentlyActive = {currentlyActiveWindow === 'about' ? true : false}
+                        currentlyActive = {currentlyActiveWindow === 'theme' ? true : false}
                         setCurrentlyActiveWindow = {setCurrentlyActiveWindow} isDisplayed = {isThemeDisplayed}
                         setIsDisplayed = {setIsThemeDisplayed}
                         setTheme = {setTheme}>
