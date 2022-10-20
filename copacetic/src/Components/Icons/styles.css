@@ -1,8 +1,12 @@
-.iconBackground {
-    background-color: rgba(255, 255, 255, 0.258);
+.cuttle .overlay {
+    background-color: rgba(255, 255, 255, 0.258);   
+}
+
+.cuthbert .overlay {
+    background-color: #21002F;
+    color: #ffffff;
 }
 
 .mb-6 {
     margin-bottom: 5rem;
 }
-

@@ -1,10 +1,17 @@
 import {useState } from "react"
-import React, { useEffect } from "react";
+import React, { useEffect } from "react"
 import './styles.css'
-import reduceImg from '../../images/focus.png'
-import expandImg from '../../images/full-screen.png'
+import ThemeContext from '../../Contexts/ThemeContext'
+import { useContext } from 'react'
+
+import fullScreenBlack from '../../images/fullScreenBlack.png'
+import fullScreenWhite from '../../images/fullScreenWhite.png'
+import reduceBlack from '../../images/reduceBlack.png'
+import reduceWhite from '../../images/reduceWhite.png'
 
 function FullScreen() {
+
+    const {theme} = useContext(ThemeContext)
     const [isFullscreen, setIsFullscreen] = useState(false)
 
     const fullScreenClick = (e) => {
@@ -35,11 +42,23 @@ function FullScreen() {
 
 
     const expand = () => {
-        return <img className="fullScreenImg" onClick={fullScreenClick} id="expand" src={expandImg}></img>
+        if(theme === 'cuttle') {
+            return <img className="fullScreenImg" onClick={fullScreenClick} id="expand" src={fullScreenBlack}></img>
+        } else if (theme === 'cuthbert') { 
+            return <img className="fullScreenImg" onClick={fullScreenClick} id="expand" src={fullScreenWhite}></img>
+        } else {
+            return <img className="fullScreenImg" onClick={fullScreenClick} id="expand" src={fullScreenBlack}></img>
+        }
     }
 
     const reduce = () => {
-        return <img className="fullScreenImg" onClick={fullScreenClick} id="reduce" src={reduceImg}></img>
+        if(theme === 'cuttle') {
+            return <img className="fullScreenImg" onClick={fullScreenClick} id="reduce" src={reduceBlack}></img>
+        } else if (theme === 'cuthbert') { 
+            return <img className="fullScreenImg" onClick={fullScreenClick} id="reduce" src={reduceWhite}></img>
+        } else {
+            return <img className="fullScreenImg" onClick={fullScreenClick} id="reduce" src={reduceBlack}></img>
+        }
     }
 
     return (

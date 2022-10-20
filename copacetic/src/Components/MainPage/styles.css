@@ -1,10 +1,3 @@
-#root {
-	background: linear-gradient(-45deg, #f7c547, #e73c50, #23a6d5, #23d5ab);
-	background-size: 400% 400%;
-	animation: gradient 15s ease infinite;
-	height: 100vh;
-}
-
 @keyframes gradient {
 	0% {
 		background-position: 0% 50%;
@@ -17,10 +10,33 @@
 	}
 }
 
-.background {
+.background.cuttle {
 	height: 70vh;
 	background: url('../../images/cuttlefish-image.png');
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: contain;
-} 
+}
+
+#root.cuttle {
+	background: linear-gradient(-45deg, #f7c547, #e73c50, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+}
+
+#root.cuthbert {
+	background-color: #21002F;
+	font-family: 'Arial Black';
+	color: #21002F;
+	position: relative;
+}
+
+.background.cuthbert {
+	height: 70vh;
+	background-color: #21002F;
+	background: url('../../images/cuthbert.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 85%;
+}
+

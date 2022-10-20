@@ -1,3 +1,11 @@
 .fullScreenImg {
     width: 25px;
 }
+
+.cuttle .fullScreenImg {
+    color: black;
+}
+
+.cuthbert .fullScreenImg {
+    color: rgb(255, 255, 255);
+}
