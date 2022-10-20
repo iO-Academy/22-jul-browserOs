@@ -11,7 +11,6 @@ import Quotlefish from "../Quotlefish";
 import Bisquids from "../Bisquids";
 import AboutContent from "../AboutContent";
 
-
 function MainPage() {
 
     const [showIcons, setShowIcons] = useState(false)
@@ -31,6 +30,7 @@ function MainPage() {
     const bisquidsTitle = 'bisquids'
     const {theme, setTheme} = useContext(ThemeContext)
     const themeClass = theme + ' background'
+   
 
     useEffect(() => {
         document.getElementById('root').className = ''
@@ -104,8 +104,6 @@ function MainPage() {
                         <Bisquids />
                     </Box>
                 }      
-            </div>
-
             {showIcons && 
             <Icons 
                 isDisplayed = {isDisplayed}
@@ -121,6 +119,8 @@ function MainPage() {
                 isBisquidsDisplayed = {isBisquidsDisplayed}
                 setIsBisquidsDisplayed = {setIsBisquidsDisplayed}/>
             }
+            </div>
+
             <NavBar 
                 setShowIcons={setShowIcons} 
                 showIcons={showIcons}/>

@@ -9,7 +9,6 @@ const Box = ({
     }) => {
 
     const handleAboutClick = () => {
-        console.log('click')
         setIsDisplayed(!isDisplayed)
     }
 
@@ -17,7 +16,7 @@ const Box = ({
 
     return (
         <>
-            <Draggable handle=".handle" onMouseDown={() => setCurrentlyActiveWindow(isWindowTitle)}>
+            <Draggable handle=".handle" bounds='parent' onMouseDown={() => setCurrentlyActiveWindow(isWindowTitle)}>
                 <div className={aboutClassName} >
                     <div className="buttons">
                         <div className="close">
