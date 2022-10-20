@@ -17,8 +17,8 @@ function MainPage() {
     const themeClass = theme + ' background'
 
     useEffect(() => {
-        document.body.className = ''
-        document.body.classList.add(theme)
+        document.getElementById('root').className = ''
+        document.getElementById('root').classList.add(theme)
     }, [theme])
 
     return (
