@@ -1,9 +1,10 @@
 import GetAGif from '../GetAGif';
+import './style.css'
 
 function Giphy() {
 
     return (
-        <img src={GetAGif()}></img> 
+        <img className="giphyImg"src={GetAGif()}></img> 
     )
 }
 
