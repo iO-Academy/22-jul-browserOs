@@ -8,7 +8,7 @@ function AboutContent() {
 
     return (
     
-        <div className="contentBox .bg-transparent"> 
+        <div className="contentBox"> 
             <div className="container">
                 <div className="row d-flex justify-content-center">
                     <h3>Cuttle OS</h3>
@@ -43,9 +43,9 @@ function AboutContent() {
                         <img src={Josh} className="profilePic"></img>
                     </div>
                 </div>
+                <div className="d-flex justify-content-center">
                 <h5>Credits:</h5>
-                <div className="d-flex">
-                <p className="text wrap">We are a group of Fullstack devs who wanted to show our front end skills,
+                <p className="text wrap w-50">We are a group of Fullstack devs who wanted to show our front end skills,
                 We hope you enjoy our browser OS!
                 </p>
                 </div>
