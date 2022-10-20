@@ -42,21 +42,21 @@ function FullScreen() {
 
     const expand = () => {
         if(theme === 'cuttle') {
-            return <img className="fullScreenImg" onClick={fullScreenClick} id="expand" src={fullScreenBlack} alt="expand"></img>
+            return <img className="fullScreenImg" onClick={fullScreenClick} id="expand" src={fullScreenBlack} alt="expand into full screen"></img>
         } else if (theme === 'cuthbert') { 
-            return <img className="fullScreenImg" onClick={fullScreenClick} id="expand" src={fullScreenWhite} alt="expand"></img>
+            return <img className="fullScreenImg" onClick={fullScreenClick} id="expand" src={fullScreenWhite} alt="expand into full screen"></img>
         } else {
-            return <img className="fullScreenImg" onClick={fullScreenClick} id="expand" src={fullScreenBlack} alt="expand"></img>
+            return <img className="fullScreenImg" onClick={fullScreenClick} id="expand" src={fullScreenBlack} alt="expand into full screen"></img>
         }
     }
 
     const reduce = () => {
         if(theme === 'cuttle') {
-            return <img className="fullScreenImg" onClick={fullScreenClick} id="reduce" src={reduceBlack} alt="minimise"></img>
+            return <img className="fullScreenImg" onClick={fullScreenClick} id="reduce" src={reduceBlack} alt="minimise full screen"></img>
         } else if (theme === 'cuthbert') { 
-            return <img className="fullScreenImg" onClick={fullScreenClick} id="reduce" src={reduceWhite} alt="minimise"></img>
+            return <img className="fullScreenImg" onClick={fullScreenClick} id="reduce" src={reduceWhite} alt="minimise full screen"></img>
         } else {
-            return <img className="fullScreenImg" onClick={fullScreenClick} id="reduce" src={reduceBlack} alt="minimise"></img>
+            return <img className="fullScreenImg" onClick={fullScreenClick} id="reduce" src={reduceBlack} alt="minimise full screen"></img>
         }
     }
 
