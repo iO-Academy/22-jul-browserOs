@@ -1,7 +1,6 @@
 import './styles.css'
 import ThemeContext from '../../Contexts/ThemeContext'
 import { useContext } from 'react'
-  
     
 function Icons({
     isDisplayed, setIsDisplayed, 
@@ -9,7 +8,7 @@ function Icons({
     isMusicDisplayed, setIsMusicDisplayed, 
     isQuotleDisplayed, setIsQuotleDisplayed, 
     isThemeDisplayed, setIsThemeDisplayed, 
-    isBisquidsDisplayed, setIsBisquidsDisplayed}) {
+    isBisquidsDisplayed, setIsBisquidsDisplayed}){
         
     const {theme} = useContext(ThemeContext)
     const themeIconStyling = theme + ' overlay col border rounded m-3 pointer'

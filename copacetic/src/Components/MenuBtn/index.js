@@ -1,7 +1,6 @@
 import './styles.css'
 import ThemeContext from '../../Contexts/ThemeContext'
 import { useContext } from 'react'
-
 import menuClosedBlack from '../../images/triangleClosedBlack.png';
 import menuClosedWhite from '../../images/triangleClosedWhite.png'; 
 import menuOpenBlack from '../../images/triangleOpenBlack.png'; 
@@ -38,5 +37,3 @@ function MenuBtn({showIcons}) {
 }
 
 export default MenuBtn
-
-//if theme === 'cuthbert' display 1 

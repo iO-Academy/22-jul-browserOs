@@ -7,7 +7,6 @@ function Clock() {
 
     const {theme} = useContext(ThemeContext)
     const themeClockStyling = theme + ' clock blockquote'
-
     const [date, setDate] = useState(new Date())
 
     useEffect(() => {
@@ -18,9 +17,7 @@ function Clock() {
     })
 
     return (
-        <>  
-            <p className={themeClockStyling}> {date.toLocaleTimeString()} </p>
-        </>
+        <p className={themeClockStyling}> {date.toLocaleTimeString()} </p>
     )
 }
 
