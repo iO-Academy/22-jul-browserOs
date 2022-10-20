@@ -1,35 +1,33 @@
 import Draggable from 'react-draggable';
 import './style.css'
 
-function box({isDisplayed, setIsDisplayed}) {
+const Box = ({children, currentlyActive, setCurrentlyActiveWindow, isDisplayed, setIsDisplayed, isWindowTitle}) => {
 
-    // const handle[insert box name ]Click = () => {
-    //     setIsDisplayed(!isDisplayed)
-    // }
+    const handleAboutClick = () => {
+        setIsDisplayed(!isDisplayed)
+    }
+
+    let aboutClassName = 'window ' + (currentlyActive ? 'selected' : '')
 
     return (
         <>
-        <Draggable handle=".handle">
-            <div className="window">
-                    <div className="buttons">
-                        <div className="close">
-                            <a onClick=
-                            // insert relavent onclick
-                            {handleAboutClick} 
-                            // insert above
-                            className="closebutton"><span><strong>x</strong></span></a>
+            <Draggable handle=".handle" onMouseDown={() => setCurrentlyActiveWindow(isWindowTitle)}>
+                <div className={aboutClassName} >
+                        <div className="buttons">
+                            <div className="close">
+                                <a onClick={handleAboutClick} className="closebutton"><span><strong>x</strong></span></a>
+                            </div>
                         </div>
+                    <div className="titlebar handle">
+                        {isWindowTitle}
                     </div>
-                <div className="titlebar handle">
-                    About
-                </div>
-                <div className="no-cursor content">
-                    {/* [insert content] */}
-                </div>
-            </div> 
-        </Draggable> 
-    </>
+                    <div className="no-cursor content">
+                        {children}
+                    </div>
+                </div> 
+            </Draggable>
+        </>
     )
 }
 
-export default box
+export default Box
