@@ -4,6 +4,7 @@ import './style.css'
 const Box = ({children, currentlyActive, setCurrentlyActiveWindow, isDisplayed, setIsDisplayed, isWindowTitle, setTheme}) => {
 
     const handleAboutClick = () => {
+        console.log('click')
         setIsDisplayed(!isDisplayed)
     }
 
