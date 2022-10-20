@@ -1,16 +1,15 @@
 import { useState, useEffect, useContext } from "react"
 import NavBar from "../NavBar"
 import './styles.css';
-import About from "../About";
 import Icons from "../Icons";
 import Themes from "../Themes";
 import ThemeContext from "../../Contexts/ThemeContext";
 import Giphy from "../Giphy";
-import ReactPlayer from "react-player"
 import Box from "../Box";
 import Music from "../Music";
 import Quotlefish from "../Quotlefish";
 import Bisquids from "../Bisquids";
+import AboutContent from "../AboutContent";
 
 
 function MainPage() {
@@ -48,7 +47,7 @@ function MainPage() {
                         setCurrentlyActiveWindow = {setCurrentlyActiveWindow}
                         isDisplayed = {isDisplayed}
                         setIsDisplayed = {setIsDisplayed}>
-                        <About />
+                        <AboutContent />
                     </Box>
                 }
 
@@ -107,11 +106,12 @@ function MainPage() {
                 }      
             </div>
 
-            <div>
-                {showIcons && 
-                <Icons 
+            {showIcons && 
+            <Icons 
                 isDisplayed = {isDisplayed}
                 setIsDisplayed = {setIsDisplayed}
+                isThemeDisplayed = {isThemeDisplayed}
+                setIsThemeDisplayed = {setIsThemeDisplayed}
                 isGifDisplayed = {isGifDisplayed}
                 setIsGifDisplayed = {setIsGifDisplayed}
                 isMusicDisplayed = {isMusicDisplayed}
@@ -120,28 +120,10 @@ function MainPage() {
                 setIsQuotleDisplayed = {setIsQuotleDisplayed}
                 isBisquidsDisplayed = {isBisquidsDisplayed}
                 setIsBisquidsDisplayed = {setIsBisquidsDisplayed}/>
-                }
-            </div>
-            {showIcons && 
-            <Icons 
-            isDisplayed = {isDisplayed}
-            setIsDisplayed = {setIsDisplayed}
-            isThemeDisplayed = {isThemeDisplayed}
-            setIsThemeDisplayed = {setIsThemeDisplayed}
-            isGifDisplayed = {isGifDisplayed}
-            setIsGifDisplayed = {setIsGifDisplayed}
-            isMusicDisplayed = {isMusicDisplayed}
-            setIsMusicDisplayed = {setIsMusicDisplayed}
-            isQuotleDisplayed = {isQuotleDisplayed}
-            setIsQuotleDisplayed = {setIsQuotleDisplayed}
-            isBisquidsDisplayed = {isBisquidsDisplayed}
-            setIsBisquidsDisplayed = {setIsBisquidsDisplayed}/>
             }
-
             <NavBar 
-            setShowIcons={setShowIcons} 
-            showIcons={showIcons}
-            />
+                setShowIcons={setShowIcons} 
+                showIcons={showIcons}/>
         </>
     )
 }

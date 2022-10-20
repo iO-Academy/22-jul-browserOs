@@ -1,12 +1,6 @@
-import Draggable from 'react-draggable';
 import './style.css'
-import ThemeContext from "../../Contexts/ThemeContext";
 
-function Themes({isThemeDisplayed, setIsThemeDisplayed, setTheme}) {
-
-    const handleThemeClick = () => {
-        setIsThemeDisplayed(!isThemeDisplayed)
-    }
+function Themes({setTheme}) {
 
     return (
         <>

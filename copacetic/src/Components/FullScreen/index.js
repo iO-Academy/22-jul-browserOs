@@ -1,6 +1,6 @@
+import './styles.css'
 import {useState } from "react"
 import React, { useEffect } from "react"
-import './styles.css'
 import ThemeContext from '../../Contexts/ThemeContext'
 import { useContext } from 'react'
 
@@ -18,7 +18,6 @@ function FullScreen() {
         if(isFullscreen) {
             document.exitFullscreen();
             setIsFullscreen(false)
-
         } else {
             document.body.requestFullscreen()
             setIsFullscreen(true)
