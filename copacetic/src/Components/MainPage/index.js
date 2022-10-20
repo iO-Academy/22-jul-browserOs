@@ -14,7 +14,6 @@ import AboutContent from "../AboutContent";
 function MainPage() {
 
     const [showIcons, setShowIcons] = useState(false)
-    const [isWindowTitle, setWindowTitle] = useState(null)
     const [isDisplayed, setIsDisplayed] = useState(false)
     const [isThemeDisplayed, setIsThemeDisplayed] = useState(false)
     const [isGifDisplayed, setIsGifDisplayed] = useState(false)
