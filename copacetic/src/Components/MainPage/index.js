@@ -93,11 +93,12 @@ function MainPage() {
                 }      
             </div>
 
-            <div>
                 {showIcons && 
                 <Icons 
                 isDisplayed = {isDisplayed}
                 setIsDisplayed = {setIsDisplayed}
+                isThemeDisplayed = {isThemeDisplayed}
+                setIsThemeDisplayed = {setIsThemeDisplayed}
                 isGifDisplayed = {isGifDisplayed}
                 setIsGifDisplayed = {setIsGifDisplayed}
                 isMusicDisplayed = {isMusicDisplayed}
@@ -113,23 +114,7 @@ function MainPage() {
                     setIsThemeDisplayed = {setIsThemeDisplayed}
                     setTheme = {setTheme}/>
                 }
-            </div>
-            {showIcons && 
-            <Icons 
-            isDisplayed = {isDisplayed}
-            setIsDisplayed = {setIsDisplayed}
-            isThemeDisplayed = {isThemeDisplayed}
-            setIsThemeDisplayed = {setIsThemeDisplayed}
-            isGifDisplayed = {isGifDisplayed}
-            setIsGifDisplayed = {setIsGifDisplayed}
-            isMusicDisplayed = {isMusicDisplayed}
-            setIsMusicDisplayed = {setIsMusicDisplayed}
-            isQuotleDisplayed = {isQuotleDisplayed}
-            setIsQuotleDisplayed = {setIsQuotleDisplayed}
-            isBisquidsDisplayed = {isBisquidsDisplayed}
-            setIsBisquidsDisplayed = {setIsBisquidsDisplayed}/>
-            }
-            
+                
             <NavBar 
             setShowIcons={setShowIcons} 
             showIcons={showIcons}
