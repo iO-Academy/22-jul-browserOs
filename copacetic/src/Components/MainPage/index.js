@@ -122,12 +122,6 @@ function MainPage() {
                 isBisquidsDisplayed = {isBisquidsDisplayed}
                 setIsBisquidsDisplayed = {setIsBisquidsDisplayed}/>
                 }
-                {isThemeDisplayed &&
-                    <Themes 
-                    isThemeDisplayed = {isThemeDisplayed}
-                    setIsThemeDisplayed = {setIsThemeDisplayed}
-                    setTheme = {setTheme}/>
-                }
 
             <NavBar 
             setShowIcons={setShowIcons} 
