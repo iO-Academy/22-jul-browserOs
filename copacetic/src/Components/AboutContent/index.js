@@ -5,15 +5,13 @@ import './style.css'
 
 function AboutContent() {
 
-
     return (
-    
+
         <div className="contentBox"> 
             <div className="container">
                 <div className="row d-flex justify-content-center">
                     <h3>Cuttle OS</h3>
                 </div>
-                
                 <div className="row d-flex justify-content-center align-items-center py-3">
                     <div>
                         <p className="px-3">Emily</p>
@@ -23,7 +21,6 @@ function AboutContent() {
                         <img src={Emily} className="profilePic"></img>
                     </div>
                 </div>
-                
                 <div className="row d-flex justify-content-center align-items-center py-3">
                     <div>
                         <p className="px-3">Joe</p>
@@ -33,7 +30,6 @@ function AboutContent() {
                         <img src={Joe} className="profilePic"></img>
                     </div>
                 </div>
-
                 <div className="row d-flex justify-content-center align-items-center py-3">
                     <div>
                         <p className="px-3">Josh</p>
@@ -43,11 +39,9 @@ function AboutContent() {
                         <img src={Josh} className="profilePic"></img>
                     </div>
                 </div>
-                <div className="d-flex justify-content-center">
-                <h5>Credits:</h5>
-                <p className="text wrap w-50">We are a group of Fullstack devs who wanted to show our front end skills,
-                We hope you enjoy our browser OS!
-                </p>
+                <div className="d-flex flex-column justify-content-center">
+                    <h5>Credits: </h5>
+                    <p className="wrap">We are a group of Fullstack devs who wanted to show our front end skills. We hope you enjoy our browser OS!</p>
                 </div>
             </div>
         </div>

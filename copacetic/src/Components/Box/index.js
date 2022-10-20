@@ -1,9 +1,15 @@
 import Draggable from 'react-draggable';
 import './style.css'
 
-const Box = ({children, currentlyActive, setCurrentlyActiveWindow, isDisplayed, setIsDisplayed, isWindowTitle}) => {
+const Box = ({
+    children, 
+    currentlyActive, setCurrentlyActiveWindow, 
+    isDisplayed, setIsDisplayed, 
+    isWindowTitle, setTheme
+    }) => {
 
     const handleAboutClick = () => {
+        console.log('click')
         setIsDisplayed(!isDisplayed)
     }
 
@@ -13,11 +19,11 @@ const Box = ({children, currentlyActive, setCurrentlyActiveWindow, isDisplayed, 
         <>
             <Draggable handle=".handle" onMouseDown={() => setCurrentlyActiveWindow(isWindowTitle)}>
                 <div className={aboutClassName} >
-                        <div className="buttons">
-                            <div className="close">
-                                <a onClick={handleAboutClick} className="closebutton"><span><strong>x</strong></span></a>
-                            </div>
+                    <div className="buttons">
+                        <div className="close">
+                            <a onClick={handleAboutClick} className="closebutton"><span><strong>x</strong></span></a>
                         </div>
+                    </div>
                     <div className="titlebar handle">
                         {isWindowTitle}
                     </div>

@@ -1,13 +1,9 @@
 import './style.css'
 
-function Quotlefish ({currentlyActive, setCurrentlyActiveWindow, isDisplayed, setIsDisplayed}) {
+function Quotlefish () {
 
     return (
-        <>
-            
-            <iframe src="https://dev.io-academy.uk/projects/2022-july/quotlefish/" className="quotleBox"></iframe>
-            
-        </>
+        <iframe src="https://dev.io-academy.uk/projects/2022-july/quotlefish/" className="quotleBox"></iframe>
     )
 }
 
