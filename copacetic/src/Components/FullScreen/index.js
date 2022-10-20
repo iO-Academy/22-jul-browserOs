@@ -1,17 +1,23 @@
-import {useState } from "react"
-import React, { useEffect } from "react";
 import './styles.css'
-import reduceImg from '../../images/focus.png'
-import expandImg from '../../images/full-screen.png'
+import {useState } from "react"
+import React, { useEffect } from "react"
+import ThemeContext from '../../Contexts/ThemeContext'
+import { useContext } from 'react'
+
+import fullScreenBlack from '../../images/fullScreenBlack.png'
+import fullScreenWhite from '../../images/fullScreenWhite.png'
+import reduceBlack from '../../images/reduceBlack.png'
+import reduceWhite from '../../images/reduceWhite.png'
 
 function FullScreen() {
+
+    const {theme} = useContext(ThemeContext)
     const [isFullscreen, setIsFullscreen] = useState(false)
 
     const fullScreenClick = (e) => {
         if(isFullscreen) {
             document.exitFullscreen();
             setIsFullscreen(false)
-
         } else {
             document.body.requestFullscreen()
             setIsFullscreen(true)
@@ -35,11 +41,23 @@ function FullScreen() {
 
 
     const expand = () => {
-        return <img className="fullScreenImg" onClick={fullScreenClick} id="expand" src={expandImg}></img>
+        if(theme === 'cuttle') {
+            return <img className="fullScreenImg" onClick={fullScreenClick} id="expand" src={fullScreenBlack} alt="expand into full screen"></img>
+        } else if (theme === 'cuthbert') { 
+            return <img className="fullScreenImg" onClick={fullScreenClick} id="expand" src={fullScreenWhite} alt="expand into full screen"></img>
+        } else {
+            return <img className="fullScreenImg" onClick={fullScreenClick} id="expand" src={fullScreenWhite} alt="expand into full screen"></img>
+        }
     }
 
     const reduce = () => {
-        return <img className="fullScreenImg" onClick={fullScreenClick} id="reduce" src={reduceImg}></img>
+        if(theme === 'cuttle') {
+            return <img className="fullScreenImg" onClick={fullScreenClick} id="reduce" src={reduceBlack} alt="minimise full screen"></img>
+        } else if (theme === 'cuthbert') { 
+            return <img className="fullScreenImg" onClick={fullScreenClick} id="reduce" src={reduceWhite} alt="minimise full screen"></img>
+        } else {
+            return <img className="fullScreenImg" onClick={fullScreenClick} id="reduce" src={reduceWhite} alt="minimise full screen"></img>
+        }
     }
 
     return (

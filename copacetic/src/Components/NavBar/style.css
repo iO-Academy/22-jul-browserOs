@@ -1,3 +1,7 @@
-.navBackground {
-    background-color: rgba(255, 255, 255, 0.258);
+.cuttle.navBackground  {
+    background-color: rgba(255, 255, 255, 0.467);
 }
+.cuthbert.navBackground {
+    background-color: rgba(255, 255, 255, 0);
+}
+
