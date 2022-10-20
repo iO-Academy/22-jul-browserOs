@@ -4,7 +4,10 @@ import './styles.css';
 import About from "../About";
 import Icons from "../Icons";
 import Giphy from "../Giphy";
+import ReactPlayer from "react-player"
 import Box from "../Box";
+import Music from "../Music";
+import Quotlefish from "../Quotlefish";
 
 function MainPage() {
 
@@ -13,8 +16,12 @@ function MainPage() {
     const [currentlyActiveWindow, setCurrentlyActiveWindow] = useState(null)
     const [showIcons, setShowIcons] = useState(false)
     const [isWindowTitle, setWindowTitle] = useState(null)
+    const [isMusicDisplayed, setIsMusicDisplayed] = useState(false)
+    const [isQuotleDisplayed, setIsQuotleDisplayed] = useState(false)
     const aboutTitle = 'about'
     const giphyTitle = 'giphy'
+    const musicTitle = 'music'
+    const quotleTitle = 'quotlefish'
     
 
     return (
@@ -33,8 +40,8 @@ function MainPage() {
 
                 {isGifDisplayed &&
                     <Box
-                    isWindowTitle = {giphyTitle}
-                    currentlyActive = {currentlyActiveWindow === 'giphy' ? true : false}
+                        isWindowTitle = {giphyTitle}
+                        currentlyActive = {currentlyActiveWindow === 'giphy' ? true : false}
                         setCurrentlyActiveWindow = {setCurrentlyActiveWindow}
                         isDisplayed = {isGifDisplayed}
                         setIsDisplayed = {setIsGifDisplayed}>
@@ -42,6 +49,26 @@ function MainPage() {
                     </Box>
                 }
 
+                {isMusicDisplayed &&
+                    <Box
+                        isWindowTitle = {musicTitle}
+                        currentlyActive = {currentlyActiveWindow === 'music' ? true : false}
+                        setCurrentlyActiveWindow = {setCurrentlyActiveWindow}
+                        isDisplayed = {isMusicDisplayed}
+                        setIsDisplayed = {setIsMusicDisplayed}>
+                        <Music />
+                    </Box>
+                }   
+                {isQuotleDisplayed &&
+                    <Box
+                        isWindowTitle = {quotleTitle}
+                        currentlyActive = {currentlyActiveWindow === 'quotlefish' ? true : false}
+                        setCurrentlyActiveWindow = {setCurrentlyActiveWindow}
+                        isDisplayed = {isQuotleDisplayed}
+                        setIsDisplayed = {setIsQuotleDisplayed}>
+                        <Quotlefish />
+                    </Box>
+                }   
             </div>
 
             <div>
@@ -50,7 +77,11 @@ function MainPage() {
                 isDisplayed = {isDisplayed}
                 setIsDisplayed = {setIsDisplayed}
                 isGifDisplayed = {isGifDisplayed}
-                setIsGifDisplayed = {setIsGifDisplayed}/>
+                setIsGifDisplayed = {setIsGifDisplayed}
+                isMusicDisplayed = {isMusicDisplayed}
+                setIsMusicDisplayed = {setIsMusicDisplayed}
+                isQuotleDisplayed = {isQuotleDisplayed}
+                setIsQuotleDisplayed = {setIsQuotleDisplayed}/>
                 }
             </div>
             {showIcons && 
@@ -58,7 +89,11 @@ function MainPage() {
             isDisplayed = {isDisplayed}
             setIsDisplayed = {setIsDisplayed}
             isGifDisplayed = {isGifDisplayed}
-            setIsGifDisplayed = {setIsGifDisplayed}/>
+            setIsGifDisplayed = {setIsGifDisplayed}
+            isMusicDisplayed = {isMusicDisplayed}
+            setIsMusicDisplayed = {setIsMusicDisplayed}
+            isQuotleDisplayed = {isQuotleDisplayed}
+            setIsQuotleDisplayed = {setIsQuotleDisplayed}/>
             }
             <NavBar 
             setShowIcons={setShowIcons} 

@@ -5,12 +5,6 @@ import { useState } from "react";
 
 function About({currentlyActive, setCurrentlyActiveWindow, isDisplayed, setIsDisplayed}) {
 
-    const handleAboutClick = () => {
-        setIsDisplayed(!isDisplayed)
-    }
-
-
-    let aboutClassName = 'window ' + (currentlyActive ? 'selected' : '')
 
     return (
         <>
