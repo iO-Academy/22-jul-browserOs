@@ -1,3 +1,7 @@
 .profilePic {
     width: 100px;
 }
+
+.bold {
+    font-weight: 700;
+}

@@ -46,7 +46,7 @@ function FullScreen() {
         } else if (theme === 'cuthbert') { 
             return <img className="fullScreenImg" onClick={fullScreenClick} id="expand" src={fullScreenWhite} alt="expand into full screen"></img>
         } else {
-            return <img className="fullScreenImg" onClick={fullScreenClick} id="expand" src={fullScreenBlack} alt="expand into full screen"></img>
+            return <img className="fullScreenImg" onClick={fullScreenClick} id="expand" src={fullScreenWhite} alt="expand into full screen"></img>
         }
     }
 
@@ -56,7 +56,7 @@ function FullScreen() {
         } else if (theme === 'cuthbert') { 
             return <img className="fullScreenImg" onClick={fullScreenClick} id="reduce" src={reduceWhite} alt="minimise full screen"></img>
         } else {
-            return <img className="fullScreenImg" onClick={fullScreenClick} id="reduce" src={reduceBlack} alt="minimise full screen"></img>
+            return <img className="fullScreenImg" onClick={fullScreenClick} id="reduce" src={reduceWhite} alt="minimise full screen"></img>
         }
     }
 

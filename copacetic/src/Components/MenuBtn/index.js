@@ -15,7 +15,7 @@ function MenuBtn({showIcons}) {
         } else if (theme === 'cuthbert') { 
             return <img className="menuImg" src={menuClosedWhite} alt="Menu"></img>
         } else {
-            return <img className="menuImg" src={menuClosedBlack} alt="Menu"></img>
+            return <img className="menuImg" src={menuClosedWhite} alt="Menu"></img>
         }
     }
 
@@ -25,7 +25,7 @@ function MenuBtn({showIcons}) {
         } else if (theme === 'cuthbert') { 
             return <img className="menuImg" src={menuOpenWhite} alt="Menu"></img>
         } else {
-            return <img className="menuImg" src={menuOpenBlack} alt="Menu"></img>
+            return <img className="menuImg" src={menuOpenWhite} alt="Menu"></img>
         }
     }
 

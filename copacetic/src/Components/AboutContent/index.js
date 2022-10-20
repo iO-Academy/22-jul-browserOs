@@ -10,7 +10,7 @@ function AboutContent() {
         <div className="contentBox"> 
             <div className="container">
                 <div className="row d-flex justify-content-center">
-                    <h3>Cuttle OS</h3>
+                    <h3 className='bold'>Cuttle OS</h3>
                 </div>
                 <div className="row d-flex justify-content-center align-items-center py-3">
                     <div>
@@ -40,7 +40,7 @@ function AboutContent() {
                     </div>
                 </div>
                 <div className="d-flex flex-column justify-content-center">
-                    <h5>Credits: </h5>
+                    <h5 className='bold'>Credits:</h5>
                     <p className="wrap">We are a group of Fullstack devs who wanted to show our front end skills. We hope you enjoy our browser OS!</p>
                 </div>
             </div>
