@@ -1,7 +1,7 @@
 import Draggable from 'react-draggable';
 import './style.css'
 
-const Box = ({children, currentlyActive, setCurrentlyActiveWindow, isDisplayed, setIsDisplayed, isWindowTitle}) => {
+const Box = ({children, currentlyActive, setCurrentlyActiveWindow, isDisplayed, setIsDisplayed, isWindowTitle, setTheme}) => {
 
     const handleAboutClick = () => {
         console.log('click')

@@ -13,7 +13,7 @@ span {
     overflow: auto;
     background: #fff;
     width: auto;
-    min-height: 300px;
+    min-height: auto;
     margin-top: 12.5vh;
     margin-left: 5vh;
     border: 1px solid #acacac;
