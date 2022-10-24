@@ -20,6 +20,14 @@ Clone this repo:
 ```
 git@github.com:iO-Academy/22-jul-browserOs.git
 ```
+Navigate into the newly created repo:
+```
+cd 22-jul-browserOs
+```
+From the root of the project run:
+```
+npm start
+```
 
 ### Authors
 
