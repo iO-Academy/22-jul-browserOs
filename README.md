@@ -24,7 +24,11 @@ Navigate into the newly created repo:
 ```
 cd 22-jul-browserOs
 ```
-From the root of the project run:
+Then navigate into the file:
+```
+cd copacetic
+```
+From the file 'copacetic' run:
 ```
 npm start
 ```
@@ -34,6 +38,3 @@ npm start
 - Emily Clarkson - [@erc-clarkson](github.com/erc-clarkson)
 - Joe Dixon - [@Jdixon04](github.com/jdixon04)
 - Josh Lewis - [@josh-lew](github.com/josh-lew)
-
-
-
