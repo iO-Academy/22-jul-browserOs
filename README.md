@@ -28,7 +28,7 @@ Then navigate into the file:
 ```
 cd copacetic
 ```
-From the file 'copacetic' run:
+From inside the file 'copacetic' run:
 ```
 npm start
 ```
