@@ -2,7 +2,7 @@
 ### Description 
 Cuttle OS is a React JS project, styled with Bootstrap and custom CSS to create a browser based OS. Modern JavaScript practices were followed throughout including using Context API in React. 
 
-In this Browser based OS, open different different browser programmes including; a random GIF generator, an about page, music player and more. To change the look and feel of the browser you can select from three different themes! 
+In this Browser based OS, open different browser programmes including; a random GIF generator, an about page, music player and more. To change the look and feel of the browser you can select from three different themes! 
 
 ##Getting Started 
 
