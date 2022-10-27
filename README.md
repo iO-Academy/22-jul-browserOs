@@ -34,7 +34,6 @@ npm start
 ```
 
 ### Authors
-
-- Emily Clarkson - [@erc-clarkson](github.com/erc-clarkson)
-- Joe Dixon - [@Jdixon04](github.com/jdixon04)
-- Josh Lewis - [@josh-lew](github.com/josh-lew)
+- Emily Clarkson - [@erc-clarkson](https://github.com/erc-clarkson)
+- Joe Dixon - [@Jdixon04](https://github.com/jdixon04)
+- Josh Lewis - [@josh-lew](https://github.com/josh-lew)
